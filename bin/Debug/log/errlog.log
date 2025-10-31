@@ -1,0 +1,880 @@
+2025-07-02 10:55:33 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Wed Jul  2 10:55:32 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Wed Jul  2 10:55:33 2025 (经历的时间: 0.45 秒)
+
+2025-07-02 10:56:13 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Wed Jul  2 10:56:12 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Wed Jul  2 10:56:13 2025 (经历的时间: 0.51 秒)
+
+2025-07-02 10:58:01 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Wed Jul  2 10:58:01 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Wed Jul  2 10:58:01 2025 (经历的时间: 0.44 秒)
+
+2025-07-02 10:58:02 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Wed Jul  2 10:58:01 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Wed Jul  2 10:58:02 2025 (经历的时间: 0.06 秒)
+
+2025-07-02 10:58:03 | 矢量变化检查 执行发生错误执行: 矢量变化检查 # # # # 不变 #开始时间: Wed Jul  2 10:58:02 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出交集取反: 值是必需的
+ERROR 000735: 输出矢量检查: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+值为空。
+值不存在。
+ERROR 000735: 连接要素: 值是必需的
+ERROR 000368: 无效的输入数据。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的
+ERROR 000735: 输出数据集: 值是必需的
+ERROR 000735: 输入表: 值是必需的执行(矢量变化检查)失败。失败 在 Wed Jul  2 10:58:03 2025 (经历的时间: 0.44 秒)
+
+2025-07-02 10:58:14 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Wed Jul  2 10:58:14 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Wed Jul  2 10:58:14 2025 (经历的时间: 0.45 秒)
+
+2025-07-02 10:58:14 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Wed Jul  2 10:58:14 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Wed Jul  2 10:58:14 2025 (经历的时间: 0.06 秒)
+
+2025-07-02 10:58:16 | 矢量变化检查 执行发生错误执行: 矢量变化检查 # # # # 不变 #开始时间: Wed Jul  2 10:58:15 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出交集取反: 值是必需的
+ERROR 000735: 输出矢量检查: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+值为空。
+值不存在。
+ERROR 000735: 连接要素: 值是必需的
+ERROR 000368: 无效的输入数据。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的
+ERROR 000735: 输出数据集: 值是必需的
+ERROR 000735: 输入表: 值是必需的执行(矢量变化检查)失败。失败 在 Wed Jul  2 10:58:16 2025 (经历的时间: 0.50 秒)
+
+2025-07-02 10:58:16 | 数据库结构查 执行发生错误执行: 数据库结构查 # #开始时间: Wed Jul  2 10:58:16 2025执行失败。参数无效。ERROR 000735: 输入要检查的数据库.gdb: 值是必需的
+ERROR 000735: 结构规则.csv: 值是必需的
+值为空。
+值为空。执行(数据库结构查)失败。失败 在 Wed Jul  2 10:58:16 2025 (经历的时间: 0.03 秒)
+
+2025-07-02 10:58:20 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Wed Jul  2 10:58:20 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Wed Jul  2 10:58:20 2025 (经历的时间: 0.45 秒)
+
+2025-07-02 10:58:21 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Wed Jul  2 10:58:20 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Wed Jul  2 10:58:20 2025 (经历的时间: 0.06 秒)
+
+2025-07-02 10:58:22 | 矢量变化检查 执行发生错误执行: 矢量变化检查 # # # # 不变 #开始时间: Wed Jul  2 10:58:21 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出交集取反: 值是必需的
+ERROR 000735: 输出矢量检查: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+值为空。
+值不存在。
+ERROR 000735: 连接要素: 值是必需的
+ERROR 000368: 无效的输入数据。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的
+ERROR 000735: 输出数据集: 值是必需的
+ERROR 000735: 输入表: 值是必需的执行(矢量变化检查)失败。失败 在 Wed Jul  2 10:58:22 2025 (经历的时间: 0.52 秒)
+
+2025-07-02 10:58:22 | 数据库结构查 执行发生错误执行: 数据库结构查 # #开始时间: Wed Jul  2 10:58:22 2025执行失败。参数无效。ERROR 000735: 输入要检查的数据库.gdb: 值是必需的
+ERROR 000735: 结构规则.csv: 值是必需的
+值为空。
+值为空。执行(数据库结构查)失败。失败 在 Wed Jul  2 10:58:22 2025 (经历的时间: 0.03 秒)
+
+2025-07-11 17:58:51 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\要素矢量和属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\要素矢量和属性对比.xml #开始时间: Fri Jul 11 17:58:51 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:51 2025 (经历的时间: 0.28 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:51 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\同字段属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\同字段属性对比.xml #开始时间: Fri Jul 11 17:58:51 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:51 2025 (经历的时间: 0.04 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:51 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\矢量变化检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\矢量变化检查.xml #开始时间: Fri Jul 11 17:58:51 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:51 2025 (经历的时间: 0.17 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:52 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\数据库结构查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\数据库结构查.xml #开始时间: Fri Jul 11 17:58:52 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:52 2025 (经历的时间: 0.03 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:52 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过点提取影像红绿蓝 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通过点提取影像红绿蓝.xml #开始时间: Fri Jul 11 17:58:52 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:52 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:54 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\生成影像信息落图 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\生成影像信息落图.xml #开始时间: Fri Jul 11 17:58:54 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:54 2025 (经历的时间: 0.03 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:55 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过落图文件批量导入影像 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通过落图文件批量导入影像.xml #开始时间: Fri Jul 11 17:58:55 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:55 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:57 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过名称批量创建影像图层 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通过名称批量创建影像图层.xml #开始时间: Fri Jul 11 17:58:57 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:57 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:57 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过名称文件txt取创建影像图层 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通过名称文件txt取创建影像图层.xml #开始时间: Fri Jul 11 17:58:57 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:57 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:57 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\批量根据后缀提取文件 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\批量根据后缀提取文件.xml #开始时间: Fri Jul 11 17:58:57 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:57 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:57 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\编码名称一致性 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\编码名称一致性.xml #开始时间: Fri Jul 11 17:58:57 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:57 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:57 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CQNFWJZA属性逻辑检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CQNFWJZA属性逻辑检查.xml #开始时间: Fri Jul 11 17:58:57 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CQNFWJZA属性逻辑检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:57 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA与CQNFWJZA一致性检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CZZZA与CQNFWJZA一致性检查.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA与CQNFWJZA一致性检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA未融合检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CZZZA未融合检查.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA未融合检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\HYDL流向检查非终端交汇点 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\HYDL流向检查非终端交汇点.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\HYDL流向检查非终端交汇点 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL与LCTL重合检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\LRDL与LCTL重合检查.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL与LCTL重合检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\地类变化图斑生成 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\地类变化图斑生成.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\地类变化图斑生成 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:58 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与去年对比.xml #开始时间: Fri Jul 11 17:58:58 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:58 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比批处理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与去年对比批处理.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比批处理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与专题资料表对比.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比批处理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与专题资料表对比批处理.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比批处理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL、LVLL与国家交通对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\LRDL、LVLL与国家交通对比.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL、LVLL与国家交通对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\水域与省地表水监测数据对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\水域与省地表水监测数据对比.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\水域与省地表水监测数据对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\河流水渠线面对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\河流水渠线面对比.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\河流水渠线面对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:58:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\数据库合并 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\数据库合并.xml #开始时间: Fri Jul 11 17:58:59 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\数据库合并 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:58:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\意见合并统计 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\意见合并统计.xml #开始时间: Fri Jul 11 17:59:00 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\意见合并统计 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\更新时间与变化类型检查意见初步整理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\更新时间与变化类型检查意见初步整理.xml #开始时间: Fri Jul 11 17:59:00 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\更新时间与变化类型检查意见初步整理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\行政区城区分析转CSV C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\行政区城区分析转CSV.xml #开始时间: Fri Jul 11 17:59:00 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\行政区城区分析转CSV 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\地名图层检查（与地名地址） C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\地名图层检查（与地名地址）.xml #开始时间: Fri Jul 11 17:59:00 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\地名图层检查（与地名地址） 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:00 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:01 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\基础数据库属性矢量对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\基础数据库属性矢量对比.xml #开始时间: Fri Jul 11 17:59:01 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:01 2025 (经历的时间: 0.43 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:02 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\927属性矢量对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\927属性矢量对比.xml #开始时间: Fri Jul 11 17:59:01 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:02 2025 (经历的时间: 0.25 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:48 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\要素矢量和属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\要素矢量和属性对比.xml #开始时间: Fri Jul 11 17:59:48 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:48 2025 (经历的时间: 0.24 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:48 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\同字段属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\同字段属性对比.xml #开始时间: Fri Jul 11 17:59:48 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:48 2025 (经历的时间: 0.05 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:49 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\矢量变化检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\矢量变化检查.xml #开始时间: Fri Jul 11 17:59:48 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:49 2025 (经历的时间: 0.18 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:49 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\数据库结构查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\数据库结构查.xml #开始时间: Fri Jul 11 17:59:49 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:49 2025 (经历的时间: 0.04 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:49 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过点提取影像红绿蓝 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通过点提取影像红绿蓝.xml #开始时间: Fri Jul 11 17:59:49 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:49 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 17:59:51 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\生成影像信息落图 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\生成影像信息落图.xml #开始时间: Fri Jul 11 17:59:51 2025未能找到路径“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Transforms\ArcGIS2ISO19139.xsl”的一部分。执行(ESRITranslator)失败。失败 在 Fri Jul 11 17:59:51 2025 (经历的时间: 0.02 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:01:45 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\要素矢量和属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\要素矢量和属性对比.xml #开始时间: Fri Jul 11 18:01:45 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:01:45 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:01:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\同字段属性对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\同字段属性对比.xml #开始时间: Fri Jul 11 18:01:59 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:01:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:01:59 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\矢量变化检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\矢量变化检查.xml #开始时间: Fri Jul 11 18:01:59 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:01:59 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\数据库结构查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\数据库结构查.xml #开始时间: Fri Jul 11 18:02:00 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:00 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过点提取影像红绿蓝 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\通过点提取影像红绿蓝.xml #开始时间: Fri Jul 11 18:02:00 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:01 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\生成影像信息落图 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\生成影像信息落图.xml #开始时间: Fri Jul 11 18:02:00 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:00 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:02 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过落图文件批量导入影像 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\通过落图文件批量导入影像.xml #开始时间: Fri Jul 11 18:02:02 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:02 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:02 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过名称批量创建影像图层 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\通过名称批量创建影像图层.xml #开始时间: Fri Jul 11 18:02:02 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:02 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:05 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\通过名称文件txt取创建影像图层 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\通过名称文件txt取创建影像图层.xml #开始时间: Fri Jul 11 18:02:04 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:04 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:06 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\批量根据后缀提取文件 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\批量根据后缀提取文件.xml #开始时间: Fri Jul 11 18:02:06 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:06 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:02:06 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\通用检查.tbx\编码名称一致性 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\通用检查\Translator\编码名称一致性.xml #开始时间: Fri Jul 11 18:02:06 2025执行失败。参数无效。ERROR 000732: 转换: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\ARCGIS2ISO19139.xml 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:02:06 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:18 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CQNFWJZA属性逻辑检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CQNFWJZA属性逻辑检查.xml #开始时间: Fri Jul 11 18:03:18 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CQNFWJZA属性逻辑检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:18 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:19 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA与CQNFWJZA一致性检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CZZZA与CQNFWJZA一致性检查.xml #开始时间: Fri Jul 11 18:03:18 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA与CQNFWJZA一致性检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:18 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:19 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA未融合检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\CZZZA未融合检查.xml #开始时间: Fri Jul 11 18:03:19 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\CZZZA未融合检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:19 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:20 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\HYDL流向检查非终端交汇点 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\HYDL流向检查非终端交汇点.xml #开始时间: Fri Jul 11 18:03:20 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\HYDL流向检查非终端交汇点 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:20 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:21 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL与LCTL重合检查 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\LRDL与LCTL重合检查.xml #开始时间: Fri Jul 11 18:03:21 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL与LCTL重合检查 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:21 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:22 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\地类变化图斑生成 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\地类变化图斑生成.xml #开始时间: Fri Jul 11 18:03:22 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\地类变化图斑生成 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:22 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:24 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与去年对比.xml #开始时间: Fri Jul 11 18:03:24 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:24 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比批处理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与去年对比批处理.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与去年对比批处理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与专题资料表对比.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比批处理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\与专题资料表对比批处理.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\与专题资料表对比批处理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL、LVLL与国家交通对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\LRDL、LVLL与国家交通对比.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\LRDL、LVLL与国家交通对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\水域与省地表水监测数据对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\水域与省地表水监测数据对比.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\水域与省地表水监测数据对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:25 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\河流水渠线面对比 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\河流水渠线面对比.xml #开始时间: Fri Jul 11 18:03:25 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\河流水渠线面对比 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:25 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:26 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\数据库合并 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\数据库合并.xml #开始时间: Fri Jul 11 18:03:26 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\数据库合并 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:26 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:26 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\意见合并统计 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\意见合并统计.xml #开始时间: Fri Jul 11 18:03:26 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\意见合并统计 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:26 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:26 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\更新时间与变化类型检查意见初步整理 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\更新时间与变化类型检查意见初步整理.xml #开始时间: Fri Jul 11 18:03:26 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\更新时间与变化类型检查意见初步整理 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:26 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:26 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\行政区城区分析转CSV C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\行政区城区分析转CSV.xml #开始时间: Fri Jul 11 18:03:26 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\城市国土空间监测.tbx\行政区城区分析转CSV 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:26 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:26 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\地名图层检查（与地名地址） C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\地名图层检查（与地名地址）.xml #开始时间: Fri Jul 11 18:03:26 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\海岸带.tbx\地名图层检查（与地名地址） 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:26 2025 (经历的时间: 0.03 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:43 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\栅格检查.tbx\通过名称文件txt取创建影像图层 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\通过名称文件txt取创建影像图层.xml #开始时间: Fri Jul 11 18:03:43 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\栅格检查.tbx\通过名称文件txt取创建影像图层 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:43 2025 (经历的时间: 0.03 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-11 18:03:53 | 执行: ESRITranslator C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\标准查阅\.tbx C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\config\Translator\ARCGIS2ISO19139.xml C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\.xml #开始时间: Fri Jul 11 18:03:53 2025执行失败。参数无效。ERROR 000732: 源元数据: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\标准查阅\.tbx 不存在或不受支持执行(ESRITranslator)失败。失败 在 Fri Jul 11 18:03:53 2025 (经历的时间: 0.01 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-07-14 08:47:46 | 读取文件时出错文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-07-14 08:47:46 | 读取文件时出错文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-07-14 09:47:33 | 读取文件时出错文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-07-14 09:47:33 | 读取文件时出错文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-01 09:57:49 | 模板创建数据库失败列“要素类名称”不属于表 。
+
+2025-09-01 10:04:13 | 模板创建数据库失败列“要素类名称”不属于表 。
+
+2025-09-01 10:13:25 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:13:33 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:13:41 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:13:59 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:17:33 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:33:02 | 数据库转模板文件失败CSV 文件未找到
+
+2025-09-01 10:34:04 | 数据库转模板文件失败未能找到文件“C:\Users\Administrator\Desktop\新建文件夹 (2)\2.csv”。
+
+2025-09-01 10:34:35 | 数据库转模板文件失败未能找到文件“C:\Users\Administrator\Desktop\新建文件夹 (2)\2.csv”。
+
+2025-09-01 10:44:54 | 批量mdb转gdb 执行发生错误Converting TO gdb...
+Conversion completed.
+执行: 批量mdb转gdb "C:\Users\Administrator\Desktop\新建文件夹 (2)" "C:\Users\Administrator\Desktop\新建文件夹 (2)\新建文件夹"开始时间: Mon Sep  1 10:44:52 2025正在运行脚本 批量mdb转gdb...Converting TO gdb...Conversion completed.Completed script 批量mdb转gdb...成功 在 Mon Sep  1 10:44:54 2025 (经历的时间: 1.86 秒)
+
+2025-09-01 11:04:38 | 模板创建数据库失败名为“??????????”的列已属于此 DataTable。
+
+2025-09-01 11:05:57 | 模板创建数据库失败名为“??????????”的列已属于此 DataTable。
+
+2025-09-01 11:11:12 | 模板创建数据库失败列“要素类名称”不属于表 。
+
+2025-09-01 11:12:17 | 模板创建数据库失败列“要素类名称”不属于表 。
+
+2025-09-01 14:51:43 | 模板创建数据库失败输入字符串的格式不正确。
+
+2025-09-01 14:52:48 | 模板创建数据库失败输入字符串的格式不正确。
+
+2025-09-01 14:55:33 | 模板创建数据库失败输入字符串的格式不正确。
+
+2025-09-01 14:57:57 | 模板创建数据库失败输入字符串的格式不正确。
+
+2025-09-01 15:07:31 | 模板创建数据库失败输入字符串的格式不正确。
+
+2025-09-01 15:54:06 | 模板创建数据库失败值不在预期的范围内。
+
+2025-09-01 15:55:20 | 模板创建数据库失败值不在预期的范围内。
+
+2025-09-01 15:56:47 | 模板创建数据库失败值不在预期的范围内。
+
+2025-09-01 15:57:10 | 模板创建数据库失败值不在预期的范围内。
+
+2025-09-01 15:58:07 | 模板创建数据库失败值不在预期的范围内。
+
+2025-09-01 16:01:48 | 模板创建数据库未执行，已存在同名数据库
+
+2025-09-02 11:57:05 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Tue Sep  2 11:57:04 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  2 11:57:05 2025 (经历的时间: 0.47 秒)
+
+2025-09-02 11:57:05 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Tue Sep  2 11:57:05 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Tue Sep  2 11:57:05 2025 (经历的时间: 0.05 秒)
+
+2025-09-02 14:51:40 | CQNFWJZA属性逻辑检查 执行发生错误
+
+2025-09-02 14:51:51 | CQNFWJZA属性逻辑检查 执行发生错误
+
+2025-09-02 14:52:12 | CQNFWJZA属性逻辑检查 执行发生错误
+
+2025-09-02 14:52:55 | CQNFWJZA属性逻辑检查 执行发生错误
+
+2025-09-02 14:54:31 | CQNFWJZA属性逻辑检查 执行发生错误
+
+2025-09-02 14:55:38 | CQNFWJZA属性逻辑检查 执行发生错误执行: CQNFWJZA属性逻辑检查 # # 2 6 0.09开始时间: Tue Sep  2 14:55:33 2025执行失败。参数无效。ERROR 000735: CQNFWJZA: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。执行(CQNFWJZA属性逻辑检查)失败。失败 在 Tue Sep  2 14:55:38 2025 (经历的时间: 5.07 秒)
+
+2025-09-02 15:59:40 | CQNFWJZA属性逻辑检查 执行发生错误System.IO.FileNotFoundException: 没有找到该工具箱
+
+   在 质检工具.Func.GISFunc.GpFunc.gp_sim(String fulltoolpath, IVariantArray parameters, String identifier) 位置 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\Func\GISFunc\GpFunc.cs:行号 82
+
+2025-09-02 16:01:07 | CQNFWJZA属性逻辑检查 执行发生错误没有找到该工具箱
+
+2025-09-02 16:30:59 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 C:\Users\Administrator\Desktop\data_sample\Export_Output_2.shp # # FEATID 否开始时间: Tue Sep  2 16:30:58 2025执行失败。参数无效。ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  2 16:30:59 2025 (经历的时间: 0.42 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-02 18:31:21 | 未开始任务已有队列中任务，无法执行单任务，多任务请添加到任务列表
+
+2025-09-02 18:31:24 | 未开始任务已有队列中任务，无法执行单任务，多任务请添加到任务列表
+
+2025-09-02 18:31:30 | CQNFWJZA属性逻辑检查 执行发生错误执行: CQNFWJZA属性逻辑检查 C:\Users\Administrator\Desktop\data_sample\Export_Output_2.shp # 2 6 0.09开始时间: Tue Sep  2 18:31:25 2025执行失败。参数无效。ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。执行(CQNFWJZA属性逻辑检查)失败。失败 在 Tue Sep  2 18:31:30 2025 (经历的时间: 5.27 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-02 18:34:35 | CQNFWJZA属性逻辑检查 执行发生错误执行: CQNFWJZA属性逻辑检查 C:\Users\Administrator\Desktop\data_sample\Export_Output_2.shp # 2 6 0.09开始时间: Tue Sep  2 18:34:30 2025执行失败。参数无效。ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。执行(CQNFWJZA属性逻辑检查)失败。失败 在 Tue Sep  2 18:34:35 2025 (经历的时间: 5.03 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 10:42:38 | 发生错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-04 10:43:22 | test 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 10:46:47 | test 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 11:03:43 | 数据库质检意见 执行发生错误执行: 数据库质检意见 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb开始时间: Thu Sep  4 11:03:42 2025执行失败。参数无效。ERROR 000732: 输入检查意见.mdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+值不存在。
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持执行(数据库质检意见)失败。失败 在 Thu Sep  4 11:03:43 2025 (经历的时间: 1.64 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 11:18:49 | test 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 11:19:26 | test 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-04 11:20:57 | 数据库质检意见 执行发生错误执行: 数据库质检意见 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb开始时间: Thu Sep  4 11:20:55 2025执行失败。参数无效。ERROR 000732: 输入检查意见.mdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+值不存在。
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\备份（不调用）\检查意见\F49G070036检查意见.mdb 不存在或不受支持执行(数据库质检意见)失败。失败 在 Thu Sep  4 11:20:57 2025 (经历的时间: 1.63 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-05 14:34:51 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Fri Sep  5 14:34:50 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Fri Sep  5 14:34:51 2025 (经历的时间: 0.86 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-05 14:34:51 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Fri Sep  5 14:34:51 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Fri Sep  5 14:34:51 2025 (经历的时间: 0.11 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-05 14:34:54 | 矢量变化检查 执行发生错误执行: 矢量变化检查 # # # # 不变 #开始时间: Fri Sep  5 14:34:53 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出交集取反: 值是必需的
+ERROR 000735: 输出矢量检查: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+值为空。
+值不存在。
+ERROR 000735: 连接要素: 值是必需的
+ERROR 000368: 无效的输入数据。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的
+ERROR 000735: 输出数据集: 值是必需的
+ERROR 000735: 输入表: 值是必需的执行(矢量变化检查)失败。失败 在 Fri Sep  5 14:34:54 2025 (经历的时间: 1.06 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:00:17 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 1 # # FEATID 否开始时间: Tue Sep  9 09:00:16 2025执行失败。参数无效。ERROR 000732: 输入要素（成果）: 数据集 1 不存在或不受支持
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值不存在。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000732: 输入要素: 数据集 1 不存在或不受支持
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输入数据元素: 数据集 1 不存在或不受支持
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  9 09:00:17 2025 (经历的时间: 0.80 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:00:21 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Tue Sep  9 09:00:21 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Tue Sep  9 09:00:21 2025 (经历的时间: 0.11 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:00:38 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 1 # # FEATID 否开始时间: Tue Sep  9 09:00:38 2025执行失败。参数无效。ERROR 000732: 输入要素（成果）: 数据集 1 不存在或不受支持
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值不存在。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000732: 输入要素: 数据集 1 不存在或不受支持
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输入数据元素: 数据集 1 不存在或不受支持
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  9 09:00:38 2025 (经历的时间: 0.87 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:00:41 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Tue Sep  9 09:00:40 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Tue Sep  9 09:00:41 2025 (经历的时间: 0.11 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:01:31 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 1 # # FEATID 否开始时间: Tue Sep  9 09:01:31 2025执行失败。参数无效。ERROR 000732: 输入要素（成果）: 数据集 1 不存在或不受支持
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值不存在。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000732: 输入要素: 数据集 1 不存在或不受支持
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输入数据元素: 数据集 1 不存在或不受支持
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  9 09:01:31 2025 (经历的时间: 0.81 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:01:32 | 同字段属性对比 执行发生错误执行: 同字段属性对比 1 # FEATID 否开始时间: Tue Sep  9 09:01:32 2025执行失败。参数无效。ERROR 000732: 检查图层: 数据集 1 不存在或不受支持
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值不存在。
+ERROR 000732: 输入要素: 数据集 1 不存在或不受支持
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Tue Sep  9 09:01:32 2025 (经历的时间: 0.10 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:03:45 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Tue Sep  9 09:03:44 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  9 09:03:45 2025 (经历的时间: 0.90 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:03:48 | 同字段属性对比 执行发生错误执行: 同字段属性对比 1 # FEATID 否开始时间: Tue Sep  9 09:03:48 2025执行失败。参数无效。ERROR 000732: 检查图层: 数据集 1 不存在或不受支持
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值不存在。
+ERROR 000732: 输入要素: 数据集 1 不存在或不受支持
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Tue Sep  9 09:03:48 2025 (经历的时间: 0.09 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:11:09 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:11:12 | 海岸线矢量属性对比（与海岸线三上数据） 执行发生错误执行: 海岸线矢量属性对比（与海岸线三上数据） HYDL C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb开始时间: Tue Sep  9 09:11:11 2025执行失败。参数无效。ERROR 000732: HYDL: 数据集 HYDL 不存在或不受支持
+ERROR 000732: 广东省海岸线汇总0720.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 检查意见.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+值不存在。
+值不存在。
+ERROR 000732: 输入要素: 数据集 HYDL 不存在或不受支持
+值不存在。
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+值不存在。
+ERROR 000732: 输出检查数据库.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms
+WARNING 000012: fzxs 已存在执行(海岸线矢量属性对比（与海岸线三上数据）)失败。失败 在 Tue Sep  9 09:11:12 2025 (经历的时间: 1.46 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:12:55 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:12:58 | 海岸线矢量属性对比（与海岸线三上数据） 执行发生错误执行: 海岸线矢量属性对比（与海岸线三上数据） HYDL C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb开始时间: Tue Sep  9 09:12:57 2025执行失败。参数无效。ERROR 000732: HYDL: 数据集 HYDL 不存在或不受支持
+ERROR 000732: 广东省海岸线汇总0720.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 检查意见.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+值不存在。
+值不存在。
+ERROR 000732: 输入要素: 数据集 HYDL 不存在或不受支持
+值不存在。
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+ERROR 000732: 输入数据元素: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\项目检查\广东省海岸线汇总0720.gdb 不存在或不受支持
+值不存在。
+ERROR 000732: 输出检查数据库.gdb: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输出位置: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\海岸带测试.gdb 不存在或不受支持
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms
+WARNING 000012: fzxs 已存在执行(海岸线矢量属性对比（与海岸线三上数据）)失败。失败 在 Tue Sep  9 09:12:58 2025 (经历的时间: 1.05 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:18:15 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:22:52 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:23:14 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:24:38 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:25:27 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:26:00 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:27:10 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:28:45 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:29:46 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:30:51 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:31:14 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:31:37 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:37:02 | 地名图层检查（与地名地址） 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 09:46:09 | 地名图层检查（与地名地址） 执行发生错误执行: 地名图层检查（与地名地址） # # # # 广东省地名地址数据库更新成果(2023年度)开始时间: Tue Sep  9 09:45:35 2025执行失败。参数无效。ERROR 000735: AGNP: 值是必需的
+ERROR 000735: AANP: 值是必需的
+ERROR 000735: 裁剪后（包含外扩100米范围）: 值是必需的
+ERROR 000735: 输出检查库.gdb: 值是必需的
+值不存在。
+值为空。
+值为空。
+ERROR 000732: 输入数据集: 数据集 '';'' 不存在或不受支持
+值为空。
+值为空。
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms
+WARNING 000012: fzxs 已存在执行(地名图层检查（与地名地址）)失败。失败 在 Tue Sep  9 09:45:37 2025 (经历的时间: 1.71 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:15:19 | mytest 执行发生错误对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:31:17 | 检查工具存在性失败: 地名图层检查（与地名地址）对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:40:41 | 检查工具存在性失败: 地名图层检查（与地名地址）对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:44:02 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:58:47 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 10:59:56 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:03:56 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:04:34 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:05:48 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:06:22 | 检查工具存在性失败: 模型对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:12:45 | 工具不存在或者参数类型错误: 要素矢量和属性对比对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:15:20 | 工具不存在或者参数类型错误: 要素矢量和属性对比对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:15:20 | 要素矢量和属性对比 执行发生错误ERROR 000735: 输入要素（成果）: 值是必需的ERROR 000735: 对比要素（数据源）: 值是必需的ERROR 000735: 输出检查数据库.gdb: 值是必需的值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms工具不存在或者参数错误
+
+2025-09-09 11:15:46 | 工具不存在或者参数类型错误: 要素矢量和属性对比对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-09 11:17:50 | 要素矢量和属性对比 执行发生错误ERROR 000735: 输入要素（成果）: 值是必需的ERROR 000735: 对比要素（数据源）: 值是必需的ERROR 000735: 输出检查数据库.gdb: 值是必需的值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms工具不存在或者参数错误
+
+2025-09-09 11:29:24 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Tue Sep  9 11:29:23 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Tue Sep  9 11:29:24 2025 (经历的时间: 0.79 秒)对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-12 09:17:57 | 发生错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-15 09:51:51 | 读取工具配置csv错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-15 10:24:37 | 同字段属性对比 执行发生错误执行: 同字段属性对比 # # FEATID 否开始时间: Mon Sep 15 10:24:36 2025执行失败。参数无效。ERROR 000735: 检查图层: 值是必需的
+ERROR 000735: 输出要素类_属性检查: 值是必需的
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的执行(同字段属性对比)失败。失败 在 Mon Sep 15 10:24:37 2025 (经历的时间: 1.50 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-15 10:28:22 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 # # # FEATID 否开始时间: Mon Sep 15 10:28:21 2025执行失败。参数无效。ERROR 000735: 输入要素（成果）: 值是必需的
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值为空。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000735: 输入数据元素: 值是必需的
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Mon Sep 15 10:28:22 2025 (经历的时间: 0.80 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-19 09:08:23 | 发生错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-19 10:57:14 | 发生错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-19 10:57:41 | 读取预设配置csv错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\mu_src\task\预设1.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-19 11:03:23 | 读取预设配置csv错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\mu_src\task\预设1.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-09-25 16:35:12 | 发生错误未将对象引用设置到对象的实例。
+
+2025-09-26 15:08:06 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-26 15:14:44 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-26 15:15:41 | 批量mdb转gdb 执行发生错误执行: 批量mdb转gdb C:\data\质检中心\影像检查测试\测试输出 C:\data\质检中心\影像检查测试开始时间: Fri Sep 26 15:15:41 2025正在运行脚本 批量mdb转gdb...Failed script 批量mdb转gdb...
+Traceback (most recent call last):
+  File "C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\数据处理与评分统计\数据处理与评分统计.tbx#批量mdb转gdb.py", line 10, in <module>
+WindowsError: [Error 3] : ''
+执行(批量mdb转gdb)失败。失败 在 Fri Sep 26 15:15:41 2025 (经历的时间: 0.29 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-26 15:21:33 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-26 15:27:41 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+
+2025-09-28 17:20:40 | 检查细斑细线 执行发生错误工具可能不存在或者参数数量不匹配
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-28 17:29:27 | 检查细斑细线 执行发生错误工具可能不存在或者参数数量不匹配
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-29 08:58:48 | 检查非法字段 执行发生错误工具可能不存在或者参数数量不匹配
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-29 08:58:58 | 检查细斑细线 执行发生错误工具可能不存在或者参数数量不匹配
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-09-29 09:39:51 | 发生错误不能在编辑会话之外更新此类中的对象 [SHTRFB]
+
+2025-09-29 09:40:39 | 发生错误未找到表。 [测试数据集_Topology]
+
+2025-09-29 10:03:13 | 发生错误路径的形式不合法。
+
+2025-09-29 10:11:01 | 发生错误未将对象引用设置到对象的实例。
+
+2025-09-29 10:17:26 | 执行错误路径的形式不合法。
+
+2025-10-10 17:27:10 | 发生错误文件“C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\config.csv”正由另一进程使用，因此该进程无法访问此文件。
+
+2025-10-11 09:51:06 | 要素矢量和属性对比 执行发生错误执行: 要素矢量和属性对比 "C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL" # # FEATID 否开始时间: Sat Oct 11 09:51:06 2025执行失败。参数无效。ERROR 000732: 输入要素（成果）: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出检查数据库.gdb: 值是必需的
+值不存在。
+值为空。
+值为空。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000732: 输入要素: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+ERROR 000735: 更新要素: 值是必需的
+WARNING 000728: 表中不存在字段 FID_灭失
+ERROR 000732: 输入数据元素: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+ERROR 000735: 输出位置: 值是必需的
+WARNING 000728: 表中不存在字段 ORIG_FID_1
+WARNING 000728: 表中不存在字段 wtms执行(要素矢量和属性对比)失败。失败 在 Sat Oct 11 09:51:06 2025 (经历的时间: 0.79 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-11 09:51:09 | 矢量变化检查 执行发生错误执行: 矢量变化检查 "C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL" # # # 不变 #开始时间: Sat Oct 11 09:51:08 2025执行失败。参数无效。ERROR 000732: 输入要素（成果）: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+ERROR 000735: 对比要素（数据源）: 值是必需的
+ERROR 000735: 输出交集取反: 值是必需的
+ERROR 000735: 输出矢量检查: 值是必需的
+值为空。
+值不存在。
+ERROR 000732: 输入要素: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+值为空。
+值不存在。
+ERROR 000732: 连接要素: 数据集 C:\Users\Administrator\Desktop\新建文件夹 (2)\检查意见库20250401.gdb/HYDL 不存在或不受支持
+ERROR 000368: 无效的输入数据。
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输入要素: 值是必需的
+ERROR 000735: 输出要素类: 值是必需的
+ERROR 000735: 输出数据集: 值是必需的
+ERROR 000735: 输入表: 值是必需的执行(矢量变化检查)失败。失败 在 Sat Oct 11 09:51:09 2025 (经历的时间: 1.03 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-14 15:31:50 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-14 15:38:49 | 发生错误连到系统上的设备没有发挥作用。
+
+2025-10-14 15:40:01 | DOM质检意见处理 执行发生错误工具可能不存在或者参数数量不匹配
+服务器出现意外情况。 (异常来自 HRESULT:0x80010105 (RPC_E_SERVERFAULT))
+
+2025-10-14 15:40:55 | DOM质检意见处理 执行发生错误ERROR 000622: 执行(1.2DOM质检意见处理)失败。参数无效。ERROR 000628: 无法设置参数 选择影像坐标系统 中的输入。
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-14 15:55:29 | DOM质检意见处理 执行发生错误执行: DOM质检意见处理 PROJCS['CGCS2000_3_Degree_GK_CM_114E',GEOGCS['GCS_China_Geodetic_Coordinate_System_2000',DATUM['D_China_2000',SPHEROID['CGCS2000',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Gauss_Kruger'],PARAMETER['False_Easting',500000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',114.0],PARAMETER['Scale_Factor',1.0],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb # #开始时间: Tue Oct 14 15:55:14 2025执行(选择数据 (5)): SelectData C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb DOM接边差开始时间: Tue Oct 14 15:55:25 2025成功 在 Tue Oct 14 15:55:25 2025 (经历的时间: 0.00 秒)执行(投影 (3)): Project C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\DOM接边差 C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\接边差_Project PROJCS['CGCS2000_3_Degree_GK_CM_114E',GEOGCS['GCS_China_Geodetic_Coordinate_System_2000',DATUM['D_China_2000',SPHEROID['CGCS2000',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Gauss_Kruger'],PARAMETER['False_Easting',500000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',114.0],PARAMETER['Scale_Factor',1.0],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] # GEOGCS['GCS_China_Geodetic_Coordinate_System_2000',DATUM['D_China_2000',SPHEROID['CGCS2000',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]] NO_PRESERVE_SHAPE # NO_VERTICAL开始时间: Tue Oct 14 15:55:25 2025成功 在 Tue Oct 14 15:55:26 2025 (经历的时间: 1.46 秒)执行(要素折点转点): FeatureVerticesToPoints C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\接边差_Project C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\接边差_起点 START开始时间: Tue Oct 14 15:55:27 2025WARNING 000117: 警告: 生成的输出为空。成功 在 Tue Oct 14 15:55:28 2025 (经历的时间: 1.42 秒)执行(添加 XY 坐标 (2)): AddXY C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\接边差_起点开始时间: Tue Oct 14 15:55:28 2025ERROR 000464: 无法获取独占方案锁。它正被其他应用程序编辑或使用。无法获取方案锁，因为已存在现有锁。尝试打开的数据库已经被机器 'DESKTOP-B2B2GKV' 上的用户 'ADMIN' 以排它的方式打开。当数据库可使用后请再试一次。执行(添加 XY 坐标 (2))失败。失败 在 Tue Oct 14 15:55:29 2025 (经历的时间: 0.42 秒)执行(DOM质检意见处理)失败。失败 在 Tue Oct 14 15:55:29 2025 (经历的时间: 14.80 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-14 17:25:50 | DOM质检意见处理 执行发生错误执行: DOM质检意见处理 PROJCS['CGCS2000_3_Degree_GK_CM_114E',GEOGCS['GCS_China_Geodetic_Coordinate_System_2000',DATUM['D_China_2000',SPHEROID['CGCS2000',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Gauss_Kruger'],PARAMETER['False_Easting',500000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',114.0],PARAMETER['Scale_Factor',1.0],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\检测模板测试\DOM抽样.shp #开始时间: Tue Oct 14 17:25:48 2025执行失败。参数无效。ERROR 000732: 检查范围_结合表/抽样【图幅号】: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\检测模板测试\DOM抽样.shp 不存在或不受支持
+ERROR 000800: 该值不是 符合性检查 | 数据库检查 | DOM检查 | DEM检查 | 附件检查 | DOM接边差 | DOM检测点 | DOM原测点 | DOM平面精度 | DOM检查_分幅 | 接边精度 的成员。
+WARNING 000728: 表中不存在字段 较差
+WARNING 000258: 输出 C:\data\质检中心\影像检查测试\测试输出\检查意见库241125.mdb\接边精度 已存在
+值为空。
+ERROR 000800: 该值不是 符合性检查 | 数据库检查 | DOM检查 | DEM检查 | 附件检查 | DOM接边差 | DOM检测点 | DOM原测点 | DOM平面精度 | DOM检查_分幅 | 接边精度 的成员。
+ERROR 000800: 该值不是 符合性检查 | 数据库检查 | DOM检查 | DEM检查 | 附件检查 | DOM接边差 | DOM检测点 | DOM原测点 | DOM平面精度 | DOM检查_分幅 | 接边精度 的成员。
+值不存在。
+值不存在。
+ERROR 000800: 该值不是 符合性检查 | 数据库检查 | DOM检查 | DEM检查 | 附件检查 | DOM接边差 | DOM检测点 | DOM原测点 | DOM平面精度 | DOM检查_分幅 | 接边精度 的成员。
+值不存在。
+ERROR 000800: 该值不是 符合性检查 | 数据库检查 | DOM检查 | DEM检查 | 附件检查 | DOM接边差 | DOM检测点 | DOM原测点 | DOM平面精度 | DOM检查_分幅 | 接边精度 的成员。
+WARNING 000728: 表中不存在字段 问题描述
+WARNING 000369: 无效的输入字段
+WARNING 000369: 无效的输入字段
+WARNING 000012: 错误面积 已存在
+WARNING 000012: FREQUENCY 已存在
+WARNING 000012: 统计整体 已存在
+WARNING 000012: 统计整合 已存在
+WARNING 000012: 整体性扣分 已存在
+WARNING 000728: 表中不存在字段 SHAPE_Area执行(DOM质检意见处理)失败。失败 在 Tue Oct 14 17:25:50 2025 (经历的时间: 2.51 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+
+2025-10-14 17:31:05 | DOM质检意见处理 执行发生错误执行: DOM质检意见处理 PROJCS['CGCS2000_3_Degree_GK_CM_114E',GEOGCS['GCS_China_Geodetic_Coordinate_System_2000',DATUM['D_China_2000',SPHEROID['CGCS2000',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Gauss_Kruger'],PARAMETER['False_Easting',500000.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',114.0],PARAMETER['Scale_Factor',1.0],PARAMETER['Latitude_Of_Origin',0.0],UNIT['Meter',1.0]] C:\data\质检中心\影像检查测试\测试输出\检查意见库.mdb C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\检测模板测试\DOM抽样.shp #开始时间: Tue Oct 14 17:31:01 2025执行失败。参数无效。ERROR 000732: 检查范围_结合表/抽样【图幅号】: 数据集 C:\质检中心\upload\zjzx_zjrj\质检工具\质检工具\bin\Debug\data\tool\检测模板测试\DOM抽样.shp 不存在或不受支持
+值为空。
+值不存在。
+值不存在。
+值不存在。
+WARNING 000012: 错误面积 已存在
+WARNING 000012: FREQUENCY 已存在
+WARNING 000012: 统计整体 已存在
+WARNING 000012: 统计整合 已存在
+WARNING 000012: 整体性扣分 已存在
+WARNING 000728: 表中不存在字段 SHAPE_Area执行(DOM质检意见处理)失败。失败 在 Tue Oct 14 17:31:05 2025 (经历的时间: 3.15 秒)
+对 COM 组件的调用返回了错误 HRESULT E_FAIL。
+

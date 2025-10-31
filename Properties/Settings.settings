@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="质检工具.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="menuconfig" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\data\tool\config.csv</Value>
+    </Setting>
+    <Setting Name="logpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\data\errlog.log</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

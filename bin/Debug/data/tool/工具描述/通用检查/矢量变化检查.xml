@@ -1,0 +1,58 @@
+﻿<MD_Metadata xmlns="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <characterSet>
+    <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+  </characterSet>
+  <hierarchyLevel>
+    <MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+  </hierarchyLevel>
+  <hierarchyLevelName>
+    <gco:CharacterString>dataset</gco:CharacterString>
+  </hierarchyLevelName>
+  <contact gco:nilReason="missing" />
+  <dateStamp gco:nilReason="missing" />
+  <metadataStandardName>
+    <gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+  </metadataStandardName>
+  <metadataStandardVersion>
+    <gco:CharacterString>2007</gco:CharacterString>
+  </metadataStandardVersion>
+  <identificationInfo>
+    <MD_DataIdentification>
+      <citation>
+        <CI_Citation>
+          <title>
+            <gco:CharacterString>1.3矢量变化检查</gco:CharacterString>
+          </title>
+          <date gco:nilReason="missing" />
+        </CI_Citation>
+      </citation>
+      <abstract>
+        <gco:CharacterString>一、输出1、输出交集取反：输入要素和对比要素的交集取反2、输出矢量检查：将输入要素与对比要素进行对比，将矢量如何变化输出至“矢量变化”字段，结果含输入要素和对比要素的属性二、对比要素的处理1、不变：不进行处理2、选择：通过“带作业范围的图幅框”将感兴趣的对比要素选择出来3、裁剪：通过“带作业范围的图幅框”将感兴趣的对比要素裁剪出来三、带作业范围的抽样框_连接服务器直接拿服务器上做好的就行{为作业范围和抽样框的结合，即对比要素的兴趣框，不必每个抽样各一个shp，可将所有抽样放在一个要素类上（要素独立），工具会按照输入要素的位置将对应的“带作业范围的抽样框”要素选择出来}</gco:CharacterString>
+      </abstract>
+      <credit>
+        <gco:CharacterString>吴迪</gco:CharacterString>
+      </credit>
+      <language gco:nilReason="missing" />
+      <characterSet>
+        <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+      </characterSet>
+    </MD_DataIdentification>
+  </identificationInfo>
+  <distributionInfo>
+    <MD_Distribution>
+      <distributor>
+        <MD_Distributor>
+          <distributorContact gco:nilReason="missing" />
+          <distributorFormat>
+            <MD_Format>
+              <name>
+                <gco:CharacterString>ArcToolbox Tool</gco:CharacterString>
+              </name>
+              <version gco:nilReason="missing" />
+            </MD_Format>
+          </distributorFormat>
+        </MD_Distributor>
+      </distributor>
+    </MD_Distribution>
+  </distributionInfo>
+</MD_Metadata>
