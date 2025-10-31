@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" modified="2024-10-31T00:00:00.000Z" agent="DrawIO" version="22.1.0">
+  <diagram name="帮助模块" id="help-module">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- GuideForm Class -->
+        <mxCell id="guideForm" value="&lt;&lt;Form&gt;&gt;&#xa;GuideForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="guideForm-methods" value="+ GuideForm_Load(): void&#xa;+ StartGuide(): void&#xa;+ NextStepButton_Click(): void&#xa;+ PreviousStepButton_Click(): void&#xa;+ SkipButton_Click(): void&#xa;+ UpdateGuideStep(): void&#xa;+ HighlightElement(controlName: string): void&#xa;+ LoadGuideConfig(): List&lt;GuideStep&gt;&#xa;+ SaveGuideProgress(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="guideForm">
+          <mxGeometry y="40" width="320" height="260" as="geometry" />
+        </mxCell>
+        
+        <!-- HelpDocForm Class -->
+        <mxCell id="helpDocForm" value="&lt;&lt;Form&gt;&gt;&#xa;HelpDocForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="360" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="helpDocForm-methods" value="+ HelpDocForm_Load(): void&#xa;+ LoadHelpDocTree(): void&#xa;+ TreeView_NodeClick(node: TreeNode): void&#xa;+ LoadHtmlDocument(path: string): void&#xa;+ LoadPdfDocument(path: string): void&#xa;+ SearchButton_Click(): void&#xa;+ SearchInDocuments(keyword: string): List&lt;SearchResult&gt;&#xa;+ BackButton_Click(): void&#xa;+ ForwardButton_Click(): void&#xa;+ PrintButton_Click(): void&#xa;+ ExportButton_Click(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="helpDocForm">
+          <mxGeometry y="40" width="360" height="340" as="geometry" />
+        </mxCell>
+        
+        <!-- GuideStep Entity -->
+        <mxCell id="guideStep" value="&lt;&lt;Entity&gt;&gt;&#xa;GuideStep" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="220" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="guideStep-attrs" value="+ StepNumber: int&#xa;+ Title: string&#xa;+ Content: string&#xa;+ TargetControl: string&#xa;+ PopupPosition: Point&#xa;+ ImagePath: string&#xa;+ IsRequired: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="guideStep">
+          <mxGeometry y="40" width="220" height="180" as="geometry" />
+        </mxCell>
+        
+        <!-- SearchResult Entity -->
+        <mxCell id="searchResult" value="&lt;&lt;Entity&gt;&gt;&#xa;SearchResult" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="800" y="40" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="searchResult-attrs" value="+ Title: string&#xa;+ Snippet: string&#xa;+ Section: string&#xa;+ FilePath: string&#xa;+ MatchPosition: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="searchResult">
+          <mxGeometry y="40" width="220" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- HelpDocManager Class -->
+        <mxCell id="helpDocMgr" value="&lt;&lt;Utility&gt;&gt;&#xa;HelpDocManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="280" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="helpDocMgr-methods" value="+ GetDocumentPath(docId: string): string&#xa;+ UpdateHelpDocuments(): void&#xa;+ ExportHelpDocToPdf(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="helpDocMgr">
+          <mxGeometry y="40" width="320" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- GuideManager Class -->
+        <mxCell id="guideMgr" value="&lt;&lt;Utility&gt;&gt;&#xa;GuideManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="guideMgr-methods" value="+ CheckShowGuideOnStartup(): bool&#xa;+ ResetGuide(): void&#xa;+ GetGuideCompletion(): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="guideMgr">
+          <mxGeometry y="40" width="320" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Relationships -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="guideForm" target="guideStep">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="helpDocForm-methods" target="searchResult-attrs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="helpDocForm" target="helpDocMgr">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="guideForm" target="guideMgr-methods">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Notes -->
+        <mxCell id="note1" value="引导模块&#xa;&#xa;提供新用户交互式引导教程，&#xa;高亮显示界面元素，&#xa;分步骤指引操作流程。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="note2" value="帮助文档模块&#xa;&#xa;提供完整的软件使用说明，&#xa;支持HTML/PDF文档浏览，&#xa;关键词搜索和导航功能。" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="460" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
