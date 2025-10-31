@@ -1,0 +1,156 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="DrawIO" version="22.0.0" type="device">
+  <diagram name="参数配置模块" id="config-module">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- SettingForm 类 -->
+        <mxCell id="SettingForm" value="&lt;b&gt;SettingForm (设置窗体)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="420" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="SettingForm-fields" value="- uiComboBox1: ComboBox&#xa;- srcfolderpath_input: Input&#xa;- selectfolder: Button&#xa;- ok_btn: Button&#xa;- pageHeader1: PageHeader" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SettingForm">
+          <mxGeometry y="30" width="420" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="SettingForm-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SettingForm">
+          <mxGeometry y="120" width="420" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SettingForm-methods" value="+ SettingForm_Load(): void&#xa;+ selectfolder_Click(): void&#xa;+ ok_btn_Click(): void&#xa;+ SettingForm_FormClosed(): void&#xa;- InitializeThemeComboBox(): void&#xa;- UnComboBox1_SelectedIndexChanged(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SettingForm">
+          <mxGeometry y="128" width="420" height="152" as="geometry" />
+        </mxCell>
+        
+        <!-- IniFunc 类 -->
+        <mxCell id="IniFunc" value="&lt;b&gt;IniFunc (配置文件管理)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="380" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="IniFunc-fields" value="- iniFilePath: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IniFunc">
+          <mxGeometry y="30" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IniFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IniFunc">
+          <mxGeometry y="60" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="IniFunc-methods" value="+ getString(key: string): string&#xa;+ writeString(key: string, value: string): void&#xa;+ getInt(key: string, defaultValue: int): int&#xa;+ writeInt(key: string, value: int): void&#xa;+ getBool(key: string, defaultValue: bool): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IniFunc">
+          <mxGeometry y="68" width="380" height="112" as="geometry" />
+        </mxCell>
+        
+        <!-- ThemeColor 类 -->
+        <mxCell id="ThemeColor" value="&lt;b&gt;ThemeColor (主题颜色)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="260" width="380" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ThemeColor-fields" value="// 静态主题管理类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ThemeColor">
+          <mxGeometry y="30" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ThemeColor-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ThemeColor">
+          <mxGeometry y="60" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ThemeColor-methods" value="+ ApplyTheme(color1, color2, color3, color4): void&#xa;+ GetCurrentTheme(): string[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ThemeColor">
+          <mxGeometry y="68" width="380" height="72" as="geometry" />
+        </mxCell>
+        
+        <!-- SaveProject 类 -->
+        <mxCell id="SaveProject" value="&lt;b&gt;SaveProject (工程保存)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="420" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="SaveProject-fields" value="- projectPath: string&#xa;- taskListPath: string&#xa;- mapDocPath: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SaveProject">
+          <mxGeometry y="30" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SaveProject-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SaveProject">
+          <mxGeometry y="90" width="420" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SaveProject-methods" value="+ SaveProjectFile(path: string): bool&#xa;+ OpenProjectFile(path: string): bool&#xa;+ SaveTaskList(): void&#xa;+ LoadTaskList(): void&#xa;+ SaveMapDocument(): void&#xa;+ LoadMapDocument(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SaveProject">
+          <mxGeometry y="98" width="420" height="102" as="geometry" />
+        </mxCell>
+        
+        <!-- SelectFileFunc 类 -->
+        <mxCell id="SelectFileFunc" value="&lt;b&gt;SelectFileFunc (文件选择)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="440" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="SelectFileFunc-fields" value="// 文件/文件夹选择工具类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SelectFileFunc">
+          <mxGeometry y="30" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SelectFileFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="SelectFileFunc">
+          <mxGeometry y="60" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SelectFileFunc-methods" value="+ sf_folder(): string&#xa;+ sf_file(filter: string): string&#xa;+ sf_files(filter: string): string[]&#xa;+ sf_saveFile(filter: string): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="SelectFileFunc">
+          <mxGeometry y="68" width="380" height="92" as="geometry" />
+        </mxCell>
+        
+        <!-- globalpara 类 -->
+        <mxCell id="globalpara" value="&lt;b&gt;globalpara (全局参数)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="420" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="globalpara-fields" value="+ dbpath: string&#xa;+ toolconfigpath: string&#xa;+ defaultGdbPath: string&#xa;+ isArcGisInitialized: bool&#xa;+ GpBeanList: List&lt;GpBean&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="globalpara">
+          <mxGeometry y="30" width="420" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="globalpara-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="globalpara">
+          <mxGeometry y="120" width="420" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="globalpara-methods" value="// 全局参数静态类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="globalpara">
+          <mxGeometry y="128" width="420" height="52" as="geometry" />
+        </mxCell>
+        
+        <!-- 关系箭头 -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="SettingForm" target="IniFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel1">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SettingForm-methods" target="ThemeColor">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel2">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SettingForm" target="SaveProject">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="450" as="sourcePoint" />
+            <mxPoint x="350" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel3">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel4" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SaveProject-methods" target="SelectFileFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="550" as="sourcePoint" />
+            <mxPoint x="350" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel4">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel5" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SaveProject" target="globalpara">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="650" as="sourcePoint" />
+            <mxPoint x="350" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel5">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,160 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="DrawIO" version="22.0.0" type="device">
+  <diagram name="质检工具模块" id="tool-module">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ToolForm 类 -->
+        <mxCell id="ToolForm" value="&lt;b&gt;ToolForm (工具窗体)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolForm-fields" value="- toolname: string&#xa;- menuBean: MenuBean&#xa;- BSM: string&#xa;- okbtn: bool&#xa;- ta: List&lt;ToolArgs&gt;&#xa;- step: bool&#xa;- formName: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ToolForm">
+          <mxGeometry y="30" width="380" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolForm-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ToolForm">
+          <mxGeometry y="140" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolForm-methods" value="+ ToolForm(menuBean: MenuBean)&#xa;+ ToolForm(tals: List&lt;ToolArgs&gt;, formName: string)&#xa;+ ToolForm(tals: List&lt;ToolArgs&gt;, step: bool)&#xa;+ ToolForm_Load(): void&#xa;+ uiButton1_Click(): void&#xa;+ uiButton2_Click(): void&#xa;+ ok_btn_Click(): void&#xa;- ReadTextBoxValues(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ToolForm">
+          <mxGeometry y="148" width="380" height="172" as="geometry" />
+        </mxCell>
+        
+        <!-- MenuBean 类 -->
+        <mxCell id="MenuBean" value="&lt;b&gt;MenuBean (菜单实体)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBean-fields" value="+ folderName: string&#xa;+ toolboxName: string&#xa;+ toolboxExpand: bool&#xa;+ toolsetName: string&#xa;+ toolsetExpand: bool&#xa;+ toolName: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuBean">
+          <mxGeometry y="30" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBean-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="MenuBean">
+          <mxGeometry y="130" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBean-methods" value="// 工具菜单配置实体类&#xa;// 从config.csv读取" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuBean">
+          <mxGeometry y="138" width="260" height="62" as="geometry" />
+        </mxCell>
+        
+        <!-- ToolArgs 类 -->
+        <mxCell id="ToolArgs" value="&lt;b&gt;ToolArgs (工具参数)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="780" y="40" width="280" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolArgs-fields" value="+ folderName: string&#xa;+ toolboxName: string&#xa;+ toolsetName: string&#xa;+ toolName: string&#xa;+ argName: string&#xa;+ argType: ArgTypeEnum&#xa;+ direction: DirectionEnum&#xa;+ defalutValue: string&#xa;+ nowValue: string&#xa;+ replaceValue: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ToolArgs">
+          <mxGeometry y="30" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolArgs-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ToolArgs">
+          <mxGeometry y="190" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ToolArgs-methods" value="+ CreatArgBean(line: string): ToolArgs&#xa;// 工具参数实体类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ToolArgs">
+          <mxGeometry y="198" width="280" height="82" as="geometry" />
+        </mxCell>
+        
+        <!-- MenuBeanFunc 类 -->
+        <mxCell id="MenuBeanFunc" value="&lt;b&gt;MenuBeanFunc&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="280" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBeanFunc-fields" value="// 菜单功能处理类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuBeanFunc">
+          <mxGeometry y="30" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBeanFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="MenuBeanFunc">
+          <mxGeometry y="60" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuBeanFunc-methods" value="+ GetToolFullPath(menuBean: MenuBean): string&#xa;+ CreatBean(line: string): MenuBean&#xa;- str2bool(instr: string): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuBeanFunc">
+          <mxGeometry y="68" width="360" height="112" as="geometry" />
+        </mxCell>
+        
+        <!-- MenuSearchFunc2 类 -->
+        <mxCell id="MenuSearchFunc2" value="&lt;b&gt;MenuSearchFunc2 (工具搜索)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="380" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuSearchFunc2-fields" value="- mymenu: Tree&#xa;- textBox: Input&#xa;- timer: Timer&#xa;- combineMenu: Tree" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuSearchFunc2">
+          <mxGeometry y="30" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuSearchFunc2-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="MenuSearchFunc2">
+          <mxGeometry y="100" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="MenuSearchFunc2-methods" value="+ MenuSearchFunc2(menu: Tree, input: Input)&#xa;+ onTextChanged(sender, e): void&#xa;+ search(): void&#xa;+ onTimerTick(sender, e): void&#xa;- getcombine(): void&#xa;- SearchMenuItems(source, text, target): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="MenuSearchFunc2">
+          <mxGeometry y="108" width="380" height="132" as="geometry" />
+        </mxCell>
+        
+        <!-- csvFunc 类 -->
+        <mxCell id="csvFunc" value="&lt;b&gt;csvFunc (配置读取)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="500" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="csvFunc-fields" value="// CSV配置文件处理类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="csvFunc">
+          <mxGeometry y="30" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="csvFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="csvFunc">
+          <mxGeometry y="60" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="csvFunc-methods" value="+ LoadToolConfig(menuBean, csvpath): List&lt;string&gt;&#xa;+ LoadTaskCache(csvpath): List&lt;ToolArgs&gt;&#xa;+ ReadCsvFile(csvpath): List&lt;string&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="csvFunc">
+          <mxGeometry y="68" width="380" height="92" as="geometry" />
+        </mxCell>
+        
+        <!-- 关系箭头 -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="ToolForm" target="MenuBean">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel1">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ToolForm-fields" target="ToolArgs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="125" />
+              <mxPoint x="440" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel2">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ToolForm" target="MenuSearchFunc2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="450" as="sourcePoint" />
+            <mxPoint x="350" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel3">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel4" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MenuBean" target="MenuBeanFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="350" as="sourcePoint" />
+            <mxPoint x="550" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4-label" value="processed by" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel4">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel5" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MenuBeanFunc" target="csvFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="550" as="sourcePoint" />
+            <mxPoint x="550" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel5">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="DrawIO" version="22.0.0" type="device">
+  <diagram name="其他工具模块" id="other-tools">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- UpdateInfoForm 类 -->
+        <mxCell id="UpdateInfoForm" value="&lt;b&gt;UpdateInfoForm (软件信息)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UpdateInfoForm-fields" value="- richTextBox1: RichTextBox&#xa;- pageHeader1: PageHeader" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UpdateInfoForm">
+          <mxGeometry y="30" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UpdateInfoForm-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="UpdateInfoForm">
+          <mxGeometry y="80" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UpdateInfoForm-methods" value="+ UpdateInfoForm_Load(): void&#xa;- LoadVersionInfo(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="UpdateInfoForm">
+          <mxGeometry y="88" width="320" height="72" as="geometry" />
+        </mxCell>
+        
+        <!-- TableForm 类 -->
+        <mxCell id="TableForm" value="&lt;b&gt;TableForm (模板下载/标准查阅)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="380" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="TableForm-fields" value="- table: AntdUI.Table&#xa;- pageHeader1: PageHeader&#xa;- button1: Button&#xa;- button2: Button&#xa;- tableType: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TableForm">
+          <mxGeometry y="30" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="TableForm-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="TableForm">
+          <mxGeometry y="120" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TableForm-methods" value="+ TableForm_Load(): void&#xa;+ button1_Click(): void&#xa;+ button2_Click(): void&#xa;- LoadTableData(): void&#xa;- DownloadSelected(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TableForm">
+          <mxGeometry y="128" width="380" height="92" as="geometry" />
+        </mxCell>
+        
+        <!-- JTGJ截图工具类 -->
+        <mxCell id="JTGJ" value="&lt;b&gt;JTGJ (截图工具)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="820" y="40" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="JTGJ-fields" value="- isCapturing: bool&#xa;- startPoint: Point&#xa;- endPoint: Point&#xa;- screenshot: Bitmap" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="JTGJ">
+          <mxGeometry y="30" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JTGJ-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="JTGJ">
+          <mxGeometry y="100" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="JTGJ-methods" value="+ StartCapture(): void&#xa;+ SaveScreenshot(path: string): void&#xa;- CaptureScreen(): Bitmap" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="JTGJ">
+          <mxGeometry y="108" width="300" height="72" as="geometry" />
+        </mxCell>
+        
+        <!-- AuthManger 授权管理类 -->
+        <mxCell id="AuthManger" value="&lt;b&gt;AuthManger (授权管理)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthManger-fields" value="// 静态授权工具类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="AuthManger">
+          <mxGeometry y="30" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthManger-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="AuthManger">
+          <mxGeometry y="60" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthManger-methods" value="+ GetMachineCode(): string&#xa;+ GetEncryUserInfo(): string&#xa;+ Verify(licPath: string): bool&#xa;- GenerateLicense(machineCode): string&#xa;- ValidateLicense(lic, machineCode): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="AuthManger">
+          <mxGeometry y="68" width="320" height="112" as="geometry" />
+        </mxCell>
+        
+        <!-- GpFunc GP工具类 -->
+        <mxCell id="GpFunc" value="&lt;b&gt;GpFunc (GP工具执行)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="380" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="GpFunc-fields" value="- gp: Geoprocessor&#xa;- toolPath: string&#xa;- parameters: IVariantArray" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="GpFunc">
+          <mxGeometry y="30" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GpFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="GpFunc">
+          <mxGeometry y="90" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="GpFunc-methods" value="+ gp_execute(toolPath, args): IGeoProcessorResult&#xa;+ gp_getversion(): string&#xa;+ gp_cancel(): void&#xa;- BuildParameters(args: List&lt;ToolArgs&gt;): IVariantArray&#xa;- GetToolMessages(result): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="GpFunc">
+          <mxGeometry y="98" width="380" height="122" as="geometry" />
+        </mxCell>
+        
+        <!-- DynamicTool 动态控件生成类 -->
+        <mxCell id="DynamicTool" value="&lt;b&gt;DynamicTool (动态控件)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="820" y="260" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="DynamicTool-fields" value="- controlList: List&lt;Control&gt;&#xa;- yOffset: int&#xa;- xPadding: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="DynamicTool">
+          <mxGeometry y="30" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DynamicTool-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="DynamicTool">
+          <mxGeometry y="90" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DynamicTool-methods" value="+ creatcontrol(form, args, menuBean): void&#xa;- CreateTextBox(arg): Control&#xa;- CreateComboBox(arg): Control&#xa;- CreateFileSelector(arg): Control" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="DynamicTool">
+          <mxGeometry y="98" width="300" height="102" as="geometry" />
+        </mxCell>
+        
+        <!-- GetNowTime 时间工具类 -->
+        <mxCell id="GetNowTime" value="&lt;b&gt;GetNowTime (时间工具)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GetNowTime-fields" value="// 静态时间工具类" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="GetNowTime">
+          <mxGeometry y="30" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GetNowTime-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="GetNowTime">
+          <mxGeometry y="60" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="GetNowTime-methods" value="+ nowtime(): string&#xa;+ nowtime2(): string&#xa;+ GetFormattedTime(format): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="GetNowTime">
+          <mxGeometry y="68" width="320" height="72" as="geometry" />
+        </mxCell>
+        
+        <!-- 关系箭头 -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UpdateInfoForm" target="AuthManger">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1-label" value="displays" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel1">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TableForm" target="GpFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="400" as="sourcePoint" />
+            <mxPoint x="550" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel2">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DynamicTool" target="GpFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="450" as="sourcePoint" />
+            <mxPoint x="550" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3-label" value="generates UI for" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel3">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel4" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AuthManger" target="GetNowTime">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="500" as="sourcePoint" />
+            <mxPoint x="350" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel4">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

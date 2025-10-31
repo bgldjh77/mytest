@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="DrawIO" version="22.0.0" type="device">
+  <diagram name="主页展示模块" id="main-display">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Rib 主界面类 -->
+        <mxCell id="Rib" value="&lt;b&gt;Rib (主界面)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="400" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="Rib-fields" value="- firstLevelMenuFunc: FirstLevelMenuFunc&#xa;+ SvgColors: string[]&#xa;- menuSearchFunc2: MenuSearchFunc2&#xa;- pSelectLayer: ILayer&#xa;- pLayer: ILayer&#xa;+ LayerPath: string&#xa;- maplayermenu: ContextMenuStrip&#xa;+ axMapControl1: AxMapControl&#xa;+ axTOCControl1: AxTOCControl&#xa;+ axToolbarControl1: AxToolbarControl&#xa;+ axToolbarControl2: AxToolbarControl&#xa;- isArcGisInitialized: bool&#xa;- panel2ToolTip: ToolTip&#xa;- tourForm: TourForm" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Rib">
+          <mxGeometry y="30" width="400" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Rib-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Rib">
+          <mxGeometry y="250" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Rib-methods" value="+ Rib_Load(): void&#xa;+ InitializeArcGisControls(): void&#xa;+ arcGisInitButton_Click(): void&#xa;+ LoadTreeMenu(menuName: string): void&#xa;+ UpdateRibbonIcons(colors: string[]): void&#xa;+ resize_picPanel(): void&#xa;- Rib_Resize(): void&#xa;- Rib_FormClosing(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Rib">
+          <mxGeometry y="258" width="400" height="162" as="geometry" />
+        </mxCell>
+        
+        <!-- FirstLevelMenuFunc 类 -->
+        <mxCell id="FirstLevelMenuFunc" value="&lt;b&gt;FirstLevelMenuFunc&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="380" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="FirstLevelMenuFunc-fields" value="- csvFunc: csvFunc&#xa;- menuBeanFunc: MenuBeanFunc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FirstLevelMenuFunc">
+          <mxGeometry y="30" width="380" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="FirstLevelMenuFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FirstLevelMenuFunc">
+          <mxGeometry y="80" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FirstLevelMenuFunc-methods" value="+ loadsubmenu(menu, foldername, tree): void&#xa;+ CreateMenuFromCsv2(foldername): List&lt;TreeItem&gt;&#xa;+ GetUniqueFirstColumn(csvpath, index): List&lt;string&gt;&#xa;+ CreateTreeItemsRecursive(data): TreeItem&#xa;- FilterByFolder(lines, foldername): List&lt;string&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FirstLevelMenuFunc">
+          <mxGeometry y="88" width="380" height="152" as="geometry" />
+        </mxCell>
+        
+        <!-- InitializeFunc 类 -->
+        <mxCell id="InitializeFunc" value="&lt;b&gt;InitializeFunc&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="380" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="InitializeFunc-fields" value="- version: string&#xa;- versionchecking: bool&#xa;- gisTimer: Timer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="InitializeFunc">
+          <mxGeometry y="30" width="380" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="InitializeFunc-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="InitializeFunc">
+          <mxGeometry y="90" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="InitializeFunc-methods" value="+ checkDefaultWorkspace(): void&#xa;+ toolResourcePath(): void&#xa;+ checkversion(form: Rib): void&#xa;+ loadmainlog(): void&#xa;+ InitializeGIS(): void&#xa;+ ShowForm&lt;T&gt;(): void&#xa;+ changebuttoncolor(btn: UISymbolButton): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="InitializeFunc">
+          <mxGeometry y="98" width="380" height="142" as="geometry" />
+        </mxCell>
+        
+        <!-- TourPopover 引导类 -->
+        <mxCell id="TourPopover" value="&lt;b&gt;TourPopover (引导教程)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="TourPopover-fields" value="- titleLabel: Label&#xa;- contentLabel: Label&#xa;- prevButton: Button&#xa;- nextButton: Button&#xa;- closeButton: Button" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TourPopover">
+          <mxGeometry y="30" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TourPopover-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="TourPopover">
+          <mxGeometry y="110" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TourPopover-methods" value="+ ShowTour(): void&#xa;+ HideTour(): void&#xa;+ NextStep(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TourPopover">
+          <mxGeometry y="118" width="320" height="62" as="geometry" />
+        </mxCell>
+        
+        <!-- AntdUIForm 类 (废弃) -->
+        <mxCell id="AntdUIForm" value="&lt;b&gt;AntdUIForm (旧版)&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="920" y="40" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AntdUIForm-fields" value="- firstLevelMenuFunc&#xa;- menuSearch" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="AntdUIForm">
+          <mxGeometry y="30" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AntdUIForm-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="AntdUIForm">
+          <mxGeometry y="80" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="AntdUIForm-methods" value="+ AntdUIForm_Load(): void&#xa;+ uionload(): void&#xa;// 已废弃，使用Rib" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="AntdUIForm">
+          <mxGeometry y="88" width="220" height="62" as="geometry" />
+        </mxCell>
+        
+        <!-- 关系箭头 -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rib" target="FirstLevelMenuFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel1">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rib-methods" target="InitializeFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="400" as="sourcePoint" />
+            <mxPoint x="650" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel2">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rib" target="TourPopover">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="500" as="sourcePoint" />
+            <mxPoint x="350" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="rel3">
+          <mxGeometry x="-0.2" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
