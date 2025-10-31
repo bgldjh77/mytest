@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" modified="2024-10-31T00:00:00.000Z" agent="DrawIO" version="22.1.0">
+  <diagram name="规则配置模块" id="rule-config-module">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- DatabaseStructureForm Class -->
+        <mxCell id="dbStructForm" value="&lt;&lt;Form&gt;&gt;&#xa;DatabaseStructureForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="280" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dbStructForm-methods" value="+ DatabaseStructureForm_Load(): void&#xa;+ LoadDatabaseTemplate(templatePath: string): void&#xa;+ AddFeatureClassButton_Click(): void&#xa;+ AddFieldButton_Click(): void&#xa;+ EditFieldButton_Click(): void&#xa;+ DeleteNodeButton_Click(): void&#xa;+ SaveTemplateButton_Click(): void&#xa;+ ExportToGdbButton_Click(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dbStructForm">
+          <mxGeometry y="40" width="280" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- DatabaseCreationForm Class -->
+        <mxCell id="dbCreateForm" value="&lt;&lt;Form&gt;&gt;&#xa;DatabaseCreationForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dbCreateForm-methods" value="+ DatabaseCreationForm_Load(): void&#xa;+ SelectTemplateButton_Click(): void&#xa;+ SelectGdbPathButton_Click(): void&#xa;+ CreateDatabaseButton_Click(): void&#xa;+ ValidateTemplateButton_Click(): void&#xa;+ ShowProgressBar(total: int): void&#xa;+ UpdateProgress(current: int, message: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dbCreateForm">
+          <mxGeometry y="40" width="320" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- TopologyRuleForm Class -->
+        <mxCell id="topoForm" value="&lt;&lt;Form&gt;&gt;&#xa;TopologyRuleForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="720" y="40" width="320" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="topoForm-methods" value="+ TopologyRuleForm_Load(): void&#xa;+ LoadFeatureDatasetButton_Click(): void&#xa;+ AddRuleButton_Click(): void&#xa;+ EditRuleButton_Click(): void&#xa;+ DeleteRuleButton_Click(): void&#xa;+ CreateTopologyButton_Click(): void&#xa;+ SaveRuleConfigButton_Click(): void&#xa;+ LoadRuleConfigButton_Click(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="topoForm">
+          <mxGeometry y="40" width="320" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- ValueDictionaryForm Class -->
+        <mxCell id="dictForm" value="&lt;&lt;Form&gt;&gt;&#xa;ValueDictionaryForm" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="320" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dictForm-methods" value="+ ValueDictionaryForm_Load(): void&#xa;+ LoadDictionaryButton_Click(): void&#xa;+ AddEntryButton_Click(): void&#xa;+ EditEntryButton_Click(): void&#xa;+ DeleteEntryButton_Click(): void&#xa;+ SaveDictionaryButton_Click(): void&#xa;+ ApplyDictionaryButton_Click(): void&#xa;+ ImportFromExcelButton_Click(): void&#xa;+ ExportToExcelButton_Click(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dictForm">
+          <mxGeometry y="40" width="320" height="240" as="geometry" />
+        </mxCell>
+        
+        <!-- GDB_Func Class -->
+        <mxCell id="gdbFunc" value="&lt;&lt;Utility&gt;&gt;&#xa;GDB_Func" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="gdbFunc-methods" value="+ CreateGDB(path: string, name: string): IWorkspace&#xa;+ CreateFeatureClassesFromTemplate(workspace, template): bool&#xa;+ CreateFeatureClass(workspace, fcName, geomType, fields): IFeatureClass&#xa;+ AddField(featureClass, fieldName, fieldType, length): void&#xa;+ CreateIndex(featureClass: IFeatureClass, fieldName: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="gdbFunc">
+          <mxGeometry y="40" width="360" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- TopologyFunc Class -->
+        <mxCell id="topoFunc" value="&lt;&lt;Utility&gt;&gt;&#xa;TopologyFunc" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="340" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="topoFunc-methods" value="+ CreateTopology(featureDataset, topologyName): ITopology&#xa;+ AddRules(topology: ITopology, rules: List&lt;TopologyRule&gt;): bool&#xa;+ ValidateTopology(topology: ITopology): TopologyValidationResult&#xa;+ ExportTopologyErrors(topology, outputPath: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="topoFunc">
+          <mxGeometry y="40" width="380" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- FieldCalculator Class -->
+        <mxCell id="fieldCalc" value="&lt;&lt;Utility&gt;&gt;&#xa;FieldCalculator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="420" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fieldCalc-methods" value="+ ApplyValueDictionary(featureClass, fieldName, dictionary): int&#xa;+ CalculateField(featureClass, fieldName, expression: string): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="fieldCalc">
+          <mxGeometry y="40" width="420" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- FieldDef Entity -->
+        <mxCell id="fieldDef" value="&lt;&lt;Entity&gt;&gt;&#xa;FieldDef" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="fieldDef-attrs" value="+ Name: string&#xa;+ Type: esriFieldType&#xa;+ Length: int&#xa;+ Precision: int&#xa;+ Scale: int&#xa;+ IsNullable: bool&#xa;+ DefaultValue: object" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="fieldDef">
+          <mxGeometry y="40" width="200" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- TopologyRule Entity -->
+        <mxCell id="topoRule" value="&lt;&lt;Entity&gt;&gt;&#xa;TopologyRule" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="740" y="560" width="220" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topoRule-attrs" value="+ RuleType: esriTopologyRuleType&#xa;+ OriginClass: string&#xa;+ DestinationClass: string&#xa;+ RuleName: string&#xa;+ IsEnabled: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="topoRule">
+          <mxGeometry y="40" width="220" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- TopologyValidationResult Entity -->
+        <mxCell id="topoResult" value="&lt;&lt;Entity&gt;&gt;&#xa;TopologyValidationResult" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="560" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="topoResult-attrs" value="+ ErrorCount: int&#xa;+ ErrorTypeStats: Dictionary&#xa;+ ValidationTime: DateTime&#xa;+ IsValid: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="topoResult">
+          <mxGeometry y="40" width="240" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Relationships -->
+        <mxCell id="rel1" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbStructForm" target="gdbFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbCreateForm" target="gdbFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topoForm" target="topoFunc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="400" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dictForm" target="fieldCalc-methods">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="600" as="sourcePoint" />
+            <mxPoint x="450" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gdbFunc-methods" target="fieldDef-attrs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="topoFunc" target="topoRule">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" value="" style="endArrow=open;endFill=0;dashed=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="topoFunc-methods" target="topoResult-attrs">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

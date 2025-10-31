@@ -481,30 +481,38 @@
       - 功能：获取当前主题颜色数组
       - 说明：返回当前应用的4个主题颜色字符串数组，用于保存配置或恢复主题。
 
-4. SaveProject（工程保存类）：
+4. SaveProject（工程保存与打开管理类）：
    a) SaveProjectFile(path: string): bool
       - 功能：保存工程文件
-      - 说明：创建INI格式的工程文件，保存任务列表路径、地图文档路径、工具资源路径、主题颜色等配置信息到指定path，成功返回true，失败返回false并记录日志。
+      - 说明：创建INI格式的工程文件，保存任务列表路径、地图文档路径、工具资源路径、主题颜色等配置信息到指定path，调用SaveTaskList()保存任务列表，如果地图控件已加载则调用SaveMapDocument()保存地图文档，记录工程保存日志，成功返回true，失败返回false并记录错误日志。支持自动创建工程目录结构。
    
    b) OpenProjectFile(path: string): bool
       - 功能：打开工程文件
-      - 说明：读取INI格式的工程文件，解析配置信息，调用LoadTaskList()加载任务列表，如果地图控件已初始化则调用LoadMapDocument()加载地图文档，恢复主题颜色和工具资源路径，成功返回true，失败返回false并记录日志。
+      - 说明：使用SelectFileFunc.sf_file()选择工程文件(.ini格式)，验证工程文件完整性，解析配置信息（任务列表路径、地图文档路径、工具资源路径、主题颜色等），调用LoadTaskList()加载任务列表到任务管理器，如果地图控件已初始化且工程包含地图数据则调用LoadMapDocument()自动恢复地图视图，调用ThemeColor.ApplyTheme()恢复主题颜色，更新工具资源路径配置，刷新主界面显示，成功返回true并提示"工程加载成功"，失败返回false并记录错误日志。
    
    c) SaveTaskList(): void
       - 功能：保存任务列表
-      - 说明：调用GpTaskFunc.saveTask2csv()将当前任务列表保存到工程目录下的tasks.csv文件。
+      - 说明：调用GpTaskFunc.saveTask2csv()将当前任务列表保存到工程目录下的tasks.csv文件，包含所有任务的参数配置和状态信息。
    
    d) LoadTaskList(): void
       - 功能：加载任务列表
-      - 说明：检查工程目录下的tasks.csv文件是否存在，存在则调用GpTaskFunc.addTaskByCache()加载任务到全局任务列表。
+      - 说明：检查工程目录下的tasks.csv文件是否存在，存在则调用GpTaskFunc.addTaskByCache()加载任务到全局任务列表，清空现有任务后重新加载，刷新TaskListForm显示。
    
    e) SaveMapDocument(): void
       - 功能：保存地图文档
-      - 说明：如果地图控件已初始化，获取axMapControl1.Map，调用IMapDocument.Save()保存为.mxd文件到工程目录。
+      - 说明：如果地图控件已初始化(globalpara.isArcGisInitialized为true)，获取axMapControl1.Map对象，创建IMapDocument实例，调用IMapDocument.Save()方法保存为.mxd文件到工程目录，保存地图视图范围、图层列表、符号化配置等信息。
    
    f) LoadMapDocument(): void
       - 功能：加载地图文档
-      - 说明：检查工程目录下的.mxd文件是否存在，存在则创建IMapDocument对象，打开文档，将Map赋值给axMapControl1.Map，刷新地图显示。
+      - 说明：检查工程目录下的.mxd文件是否存在，存在则创建IMapDocument对象，调用IMapDocument.Open()打开文档，将IMapDocument.Map赋值给axMapControl1.Map，刷新地图显示，恢复上次保存的视图范围和图层状态。
+   
+   g) GetProjectInfo(path: string): Dictionary<string, string>
+      - 功能：获取工程基本信息
+      - 说明：读取工程文件，提取工程名称、创建时间、最后修改时间、任务数量、地图文档路径等信息，返回包含这些信息的字典，用于工程列表显示或工程属性查看。
+   
+   h) ValidateProject(path: string): bool
+      - 功能：验证工程文件有效性
+      - 说明：检查工程文件是否存在、格式是否正确、必要的配置项是否完整、关联的文件路径是否有效，返回验证结果，防止加载损坏的工程文件导致系统异常。
 
 5. SelectFileFunc（文件选择类）：
    a) sf_folder(): string
@@ -651,6 +659,316 @@
       - 说明：根据传入的format参数（DateTime格式字符串）返回格式化的当前时间，支持任意DateTime.ToString()支持的格式。
 
 ================================================================================
+七、规则配置模块 (类图文件: 07_规则配置模块.drawio)
+================================================================================
+
+1. DatabaseStructureForm（数据库结构配置窗体类）：
+   a) DatabaseStructureForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，初始化数据库结构树形控件，加载已保存的数据库结构配置模板，显示要素类、字段、字段类型等结构信息。
+   
+   b) LoadDatabaseTemplate(templatePath: string): void
+      - 功能：加载数据库结构模板
+      - 说明：从XML或JSON格式的模板文件中读取数据库结构定义，包括要素类名称、几何类型、字段列表（字段名、字段类型、长度、精度、是否可空等），解析后显示在树形控件中，支持模板的导入和导出。
+   
+   c) AddFeatureClassButton_Click(): void
+      - 功能：添加要素类
+      - 说明：弹出输入对话框，输入要素类名称和几何类型（点、线、面），创建新的要素类节点添加到树形控件，默认添加OBJECTID和Shape字段。
+   
+   d) AddFieldButton_Click(): void
+      - 功能：添加字段
+      - 说明：选中要素类节点后，弹出字段编辑对话框，输入字段名称、字段类型（文本、整数、浮点数、日期等）、长度、精度、默认值、是否可空等属性，创建新字段节点添加到选中的要素类下。
+   
+   e) EditFieldButton_Click(): void
+      - 功能：编辑字段
+      - 说明：选中字段节点后，弹出字段编辑对话框，显示当前字段的所有属性，允许修改字段类型、长度、精度等，保存修改后更新树形控件显示。
+   
+   f) DeleteNodeButton_Click(): void
+      - 功能：删除节点
+      - 说明：选中要素类或字段节点后，弹出确认对话框，确认后从树形控件中删除节点，如果删除要素类则同时删除其下所有字段。
+   
+   g) SaveTemplateButton_Click(): void
+      - 功能：保存数据库结构模板
+      - 说明：将当前树形控件中的数据库结构序列化为XML或JSON格式，调用SelectFileFunc.sf_saveFile()选择保存路径，保存模板文件，记录保存日志。
+   
+   h) ExportToGdbButton_Click(): void
+      - 功能：导出为地理数据库
+      - 说明：根据当前配置的数据库结构，调用GDB_Func.CreateFeatureClassesFromTemplate()在指定的地理数据库中创建要素类和字段，支持批量创建，记录创建日志。
+
+2. DatabaseCreationForm（数据库建立窗体类）：
+   a) DatabaseCreationForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，加载可用的数据库结构模板列表，初始化数据库类型选择（文件地理数据库、个人地理数据库、企业地理数据库），设置默认工作空间路径。
+   
+   b) SelectTemplateButton_Click(): void
+      - 功能：选择数据库结构模板
+      - 说明：调用SelectFileFunc.sf_file("*.xml;*.json")选择数据库结构模板文件，读取模板内容并显示要素类列表和字段信息供用户预览。
+   
+   c) SelectGdbPathButton_Click(): void
+      - 功能：选择地理数据库路径
+      - 说明：根据数据库类型选择文件夹（文件GDB）或文件（个人GDB），调用SelectFileFunc.sf_folder()或sf_file()选择路径，显示在路径输入框中。
+   
+   d) CreateDatabaseButton_Click(): void
+      - 功能：创建地理数据库
+      - 说明：验证模板和路径是否已选择，调用GDB_Func.CreateGDB()创建新的地理数据库，调用GDB_Func.CreateFeatureClassesFromTemplate()根据模板批量创建要素类、字段、索引，显示创建进度条，完成后记录日志并提示"数据库创建成功"。
+   
+   e) ValidateTemplateButton_Click(): void
+      - 功能：验证模板合法性
+      - 说明：检查模板文件格式是否正确，验证要素类名称是否符合命名规范，检查字段定义是否合法（如字段名不能包含特殊字符、字段类型必须为支持的类型），显示验证结果。
+   
+   f) ShowProgressBar(total: int): void
+      - 功能：显示进度条
+      - 说明：初始化进度条控件，设置最大值为total（要素类总数），在创建每个要素类后调用UpdateProgress()更新进度。
+   
+   g) UpdateProgress(current: int, message: string): void
+      - 功能：更新创建进度
+      - 说明：更新进度条值为current，更新进度文本为message（如"正在创建要素类：道路_L"），刷新界面显示。
+
+3. TopologyRuleForm（拓扑规则配置窗体类）：
+   a) TopologyRuleForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，加载可用的要素类列表（从地理数据库中读取），初始化拓扑规则类型下拉框（面不重叠、线不相交、点必须被线覆盖等），加载已有的拓扑规则配置。
+   
+   b) LoadFeatureDatasetButton_Click(): void
+      - 功能：加载要素数据集
+      - 说明：调用SelectFileFunc.sf_file("*.gdb")选择地理数据库，使用IWorkspaceFactory打开工作空间，枚举所有要素数据集和要素类，显示在树形控件中供用户选择。
+   
+   c) AddRuleButton_Click(): void
+      - 功能：添加拓扑规则
+      - 说明：验证要素类和规则类型是否已选择，创建TopologyRule对象，设置源要素类、目标要素类（如果需要）、规则类型，添加到规则列表控件中，支持同一要素类配置多个规则。
+   
+   d) EditRuleButton_Click(): void
+      - 功能：编辑拓扑规则
+      - 说明：选中规则列表中的规则后，弹出编辑对话框，显示当前规则的要素类和规则类型，允许修改规则参数（如容差值），保存后更新规则列表。
+   
+   e) DeleteRuleButton_Click(): void
+      - 功能：删除拓扑规则
+      - 说明：选中规则列表中的规则后，弹出确认对话框，确认后从列表中删除规则。
+   
+   f) CreateTopologyButton_Click(): void
+      - 功能：创建拓扑
+      - 说明：验证规则列表不为空，调用TopologyFunc.CreateTopology()在要素数据集中创建拓扑，调用TopologyFunc.AddRules()批量添加配置的拓扑规则，调用ITopology.Validate()验证拓扑，显示验证结果（错误数量、警告数量），记录创建日志。
+   
+   g) SaveRuleConfigButton_Click(): void
+      - 功能：保存拓扑规则配置
+      - 说明：将当前配置的拓扑规则列表序列化为XML或JSON格式，调用SelectFileFunc.sf_saveFile()选择保存路径，保存配置文件，便于后续重复使用。
+   
+   h) LoadRuleConfigButton_Click(): void
+      - 功能：加载拓扑规则配置
+      - 说明：调用SelectFileFunc.sf_file("*.xml;*.json")选择拓扑规则配置文件，读取配置内容，解析拓扑规则列表，显示在规则列表控件中。
+
+4. ValueDictionaryForm（赋值词典配置窗体类）：
+   a) ValueDictionaryForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，加载已保存的赋值词典列表，初始化词典类型选择（字段赋值、代码映射、标准值等），显示词典内容表格。
+   
+   b) LoadDictionaryButton_Click(): void
+      - 功能：加载赋值词典
+      - 说明：调用SelectFileFunc.sf_file("*.csv;*.xlsx")选择词典文件，读取文件内容，解析为键值对列表，显示在词典表格控件中，支持多列显示（编码、名称、说明等）。
+   
+   c) AddEntryButton_Click(): void
+      - 功能：添加词典条目
+      - 说明：弹出输入对话框，输入编码（或键）、名称（或值）、说明等信息，创建新的词典条目添加到表格控件中。
+   
+   d) EditEntryButton_Click(): void
+      - 功能：编辑词典条目
+      - 说明：选中表格中的条目后，弹出编辑对话框，显示当前条目的所有字段，允许修改编码、名称、说明，保存后更新表格显示。
+   
+   e) DeleteEntryButton_Click(): void
+      - 功能：删除词典条目
+      - 说明：选中表格中的条目后，弹出确认对话框，确认后从表格中删除条目。
+   
+   f) SaveDictionaryButton_Click(): void
+      - 功能：保存赋值词典
+      - 说明：将当前表格中的词典条目导出为CSV或Excel格式，调用SelectFileFunc.sf_saveFile()选择保存路径，保存词典文件，记录保存日志。
+   
+   g) ApplyDictionaryButton_Click(): void
+      - 功能：应用赋值词典
+      - 说明：选择目标要素类和字段，根据词典中的映射关系批量更新字段值，调用FieldCalculator.ApplyValueDictionary()执行批量赋值，显示更新进度和结果（成功数量、失败数量）。
+   
+   h) ImportFromExcelButton_Click(): void
+      - 功能：从Excel导入词典
+      - 说明：调用SelectFileFunc.sf_file("*.xlsx")选择Excel文件，读取指定工作表的内容，自动识别列名（编码、名称、说明），解析为词典条目列表，显示在表格中。
+   
+   i) ExportToExcelButton_Click(): void
+      - 功能：导出词典到Excel
+      - 说明：将当前词典表格内容导出为Excel文件，设置列标题和样式，调用ExcelHelper.ExportToExcel()生成Excel文件，保存到用户指定路径。
+
+5. GDB_Func（地理数据库操作类）：
+   a) CreateGDB(path: string, name: string): IWorkspace
+      - 功能：创建地理数据库
+      - 说明：使用IWorkspaceFactory创建文件地理数据库或个人地理数据库，设置数据库名称和路径，返回IWorkspace对象，异常时记录错误日志并返回null。
+   
+   b) CreateFeatureClassesFromTemplate(workspace: IWorkspace, template: string): bool
+      - 功能：根据模板批量创建要素类
+      - 说明：读取数据库结构模板文件，解析要素类和字段定义，调用CreateFeatureClass()逐个创建要素类，为每个要素类添加字段、设置默认值、创建索引，成功返回true，失败返回false并记录错误日志。
+   
+   c) CreateFeatureClass(workspace: IWorkspace, fcName: string, geomType: esriGeometryType, fields: List<FieldDef>): IFeatureClass
+      - 功能：创建单个要素类
+      - 说明：创建IFeatureClassDescription对象，设置要素类名称和几何类型，调用IFieldsEdit添加自定义字段，调用IFeatureWorkspace.CreateFeatureClass()创建要素类，返回IFeatureClass对象。
+   
+   d) AddField(featureClass: IFeatureClass, fieldName: string, fieldType: esriFieldType, length: int): void
+      - 功能：添加字段到要素类
+      - 说明：创建IFieldEdit对象，设置字段名、类型、长度、精度等属性，调用IClass.AddField()将字段添加到要素类，异常时记录错误日志。
+   
+   e) CreateIndex(featureClass: IFeatureClass, fieldName: string): void
+      - 功能：创建字段索引
+      - 说明：创建IIndex对象，设置索引字段和索引类型，调用IFeatureClass.AddIndex()添加索引，提高查询性能，异常时记录警告日志。
+
+6. TopologyFunc（拓扑操作类）：
+   a) CreateTopology(featureDataset: IFeatureDataset, topologyName: string): ITopology
+      - 功能：创建拓扑
+      - 说明：调用IFeatureDataset.CreateTopology()创建拓扑，设置拓扑名称和簇容差，返回ITopology对象，异常时记录错误日志并返回null。
+   
+   b) AddRules(topology: ITopology, rules: List<TopologyRule>): bool
+      - 功能：批量添加拓扑规则
+      - 说明：遍历规则列表，调用ITopology.AddRule()逐个添加规则，设置规则类型、源要素类、目标要素类，成功返回true，失败返回false并记录错误日志。
+   
+   c) ValidateTopology(topology: ITopology): TopologyValidationResult
+      - 功能：验证拓扑
+      - 说明：调用ITopology.ValidateTopology()执行拓扑验证，统计拓扑错误数量和类型，返回验证结果对象（包含错误列表、错误类型统计、验证时间等），记录验证日志。
+   
+   d) ExportTopologyErrors(topology: ITopology, outputPath: string): void
+      - 功能：导出拓扑错误
+      - 说明：调用ITopology.get_ErrorFeatureClass()获取拓扑错误要素类，导出为Shapefile或要素类，包含错误类型、错误位置、涉及要素等信息，保存到指定路径。
+
+7. FieldCalculator（字段计算类）：
+   a) ApplyValueDictionary(featureClass: IFeatureClass, fieldName: string, dictionary: Dictionary<string, string>): int
+      - 功能：应用赋值词典批量更新字段
+      - 说明：使用UpdateCursor遍历要素类，根据字典中的键值对更新字段值，支持基于其他字段的条件赋值，返回更新的要素数量，异常时记录错误日志。
+   
+   b) CalculateField(featureClass: IFeatureClass, fieldName: string, expression: string): bool
+      - 功能：字段计算
+      - 说明：使用ICalculator执行字段计算表达式，支持VBScript或Python表达式，更新字段值，成功返回true，失败返回false并记录错误日志。
+
+8. FieldDef（字段定义实体类）：
+   - 说明：存储字段定义信息，包括字段名(Name)、字段类型(Type)、长度(Length)、精度(Precision)、小数位数(Scale)、是否可空(IsNullable)、默认值(DefaultValue)等属性，用于数据库结构模板和要素类创建。
+
+9. TopologyRule（拓扑规则实体类）：
+   - 说明：存储拓扑规则信息，包括规则类型(RuleType)、源要素类(OriginClass)、目标要素类(DestinationClass)、规则名称(RuleName)、是否启用(IsEnabled)等属性，用于拓扑规则配置和创建。
+
+10. TopologyValidationResult（拓扑验证结果实体类）：
+    - 说明：存储拓扑验证结果，包括错误总数(ErrorCount)、错误类型统计(ErrorTypeStats)、验证时间(ValidationTime)、是否通过验证(IsValid)等属性，用于验证结果展示和报告生成。
+
+================================================================================
+八、帮助模块 (类图文件: 08_帮助模块.drawio)
+================================================================================
+
+1. GuideForm（引导窗体类）：
+   a) GuideForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，加载引导步骤配置，初始化步骤指示器，设置当前步骤为第一步，高亮显示对应的界面元素。
+   
+   b) StartGuide(): void
+      - 功能：开始引导教程
+      - 说明：显示引导窗体，设置窗体为半透明覆盖层，调用HighlightElement()高亮第一步的目标元素，显示引导文本和操作提示，启用"上一步"、"下一步"、"跳过"按钮。
+   
+   c) NextStepButton_Click(): void
+      - 功能：进入下一步引导
+      - 说明：增加当前步骤索引，调用UpdateGuideStep()更新引导内容，移动高亮区域到新的目标元素，更新引导文本和图示。如果已是最后一步，关闭引导窗体并记录完成日志。
+   
+   d) PreviousStepButton_Click(): void
+      - 功能：返回上一步引导
+      - 说明：减少当前步骤索引，调用UpdateGuideStep()更新引导内容，移动高亮区域到上一步的目标元素，更新引导文本。如果已是第一步，禁用"上一步"按钮。
+   
+   e) SkipButton_Click(): void
+      - 功能：跳过引导
+      - 说明：弹出确认对话框"确定要跳过引导吗？"，确认后关闭引导窗体，调用IniFunc.writeBool("ShowGuideOnStartup", false)保存设置，下次启动不再自动显示引导。
+   
+   f) UpdateGuideStep(): void
+      - 功能：更新引导步骤
+      - 说明：根据当前步骤索引从引导配置中读取步骤信息（标题、内容、目标元素、位置等），调用HighlightElement()高亮目标元素，更新引导文本标签，更新步骤指示器（如"第3步，共10步"），调整引导提示框位置。
+   
+   g) HighlightElement(controlName: string): void
+      - 功能：高亮界面元素
+      - 说明：在主窗体中查找名为controlName的控件，获取控件的屏幕坐标和大小，在引导窗体上绘制高亮边框和遮罩层，使目标元素突出显示，其他区域变暗。
+   
+   h) LoadGuideConfig(): List<GuideStep>
+      - 功能：加载引导配置
+      - 说明：从XML或JSON格式的配置文件中读取引导步骤列表，每个步骤包含标题、内容、目标控件名、位置、图片等信息，返回GuideStep对象列表。
+   
+   i) SaveGuideProgress(): void
+      - 功能：保存引导进度
+      - 说明：将当前步骤索引保存到配置文件，用户下次打开引导时可以从上次的进度继续，调用IniFunc.writeInt("GuideCurrentStep", currentStep)保存进度。
+
+2. HelpDocForm（帮助文档窗体类）：
+   a) HelpDocForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，加载帮助文档目录树，初始化WebBrowser控件或PDF阅读器控件，设置搜索框和导航按钮。
+   
+   b) LoadHelpDocTree(): void
+      - 功能：加载帮助文档目录树
+      - 说明：读取帮助文档索引文件（catalog.xml），解析目录结构（章节、小节），创建树形控件节点，每个节点的Tag属性保存对应的文档文件路径（HTML或PDF），绑定节点点击事件。
+   
+   c) TreeView_NodeClick(node: TreeNode): void
+      - 功能：目录节点点击事件
+      - 说明：获取节点Tag中的文档路径，判断文档类型（HTML或PDF），调用LoadHtmlDocument()或LoadPdfDocument()加载文档，更新浏览历史记录。
+   
+   d) LoadHtmlDocument(path: string): void
+      - 功能：加载HTML文档
+      - 说明：使用WebBrowser控件加载HTML文件，设置AllowNavigation为true支持超链接跳转，绑定Navigating事件拦截外部链接，应用自定义CSS样式，记录浏览历史。
+   
+   e) LoadPdfDocument(path: string): void
+      - 功能：加载PDF文档
+      - 说明：使用AxAcroPDF控件或第三方PDF阅读器组件加载PDF文件，设置工具栏和导航栏显示，支持缩放、打印、另存为等操作，记录浏览历史。
+   
+   f) SearchButton_Click(): void
+      - 功能：搜索帮助文档
+      - 说明：获取搜索框输入的关键词，调用SearchInDocuments()在所有文档中搜索匹配内容，显示搜索结果列表（包含标题、摘要、所在章节），支持点击结果跳转到对应文档位置。
+   
+   g) SearchInDocuments(keyword: string): List<SearchResult>
+      - 功能：在文档中搜索关键词
+      - 说明：遍历帮助文档目录，使用全文搜索引擎（如Lucene.NET）或正则表达式在HTML和PDF文档中搜索关键词，提取匹配内容的上下文作为摘要，返回搜索结果列表。
+   
+   h) BackButton_Click(): void
+      - 功能：后退按钮点击
+      - 说明：从浏览历史记录中获取上一个文档路径，调用LoadHtmlDocument()或LoadPdfDocument()加载文档，更新历史记录索引。
+   
+   i) ForwardButton_Click(): void
+      - 功能：前进按钮点击
+      - 说明：从浏览历史记录中获取下一个文档路径，调用LoadHtmlDocument()或LoadPdfDocument()加载文档，更新历史记录索引。
+   
+   j) PrintButton_Click(): void
+      - 功能：打印文档
+      - 说明：调用WebBrowser.ShowPrintDialog()或PDF控件的打印方法，打开打印对话框，支持打印预览和打印设置。
+   
+   k) ExportButton_Click(): void
+      - 功能：导出文档
+      - 说明：调用SelectFileFunc.sf_saveFile()选择保存路径，将当前文档导出为PDF或HTML格式，保存到用户指定位置，记录导出日志。
+
+3. GuideStep（引导步骤实体类）：
+   - 说明：存储引导步骤信息，包括步骤编号(StepNumber)、标题(Title)、内容描述(Content)、目标控件名(TargetControl)、提示框位置(PopupPosition)、配图路径(ImagePath)、是否必须完成(IsRequired)等属性，用于引导流程配置和显示。
+
+4. SearchResult（搜索结果实体类）：
+   - 说明：存储帮助文档搜索结果，包括文档标题(Title)、匹配内容摘要(Snippet)、所在章节(Section)、文档路径(FilePath)、匹配位置(MatchPosition)等属性，用于搜索结果展示和跳转。
+
+5. HelpDocManager（帮助文档管理类）：
+   a) GetDocumentPath(docId: string): string
+      - 功能：获取文档路径
+      - 说明：根据文档ID从索引文件中查找对应的文档文件路径，支持多语言文档（根据系统语言自动选择），返回文档完整路径。
+   
+   b) UpdateHelpDocuments(): void
+      - 功能：更新帮助文档
+      - 说明：检查服务器上是否有新版本的帮助文档，下载更新的文档文件到本地帮助文档目录，更新索引文件，记录更新日志。
+   
+   c) ExportHelpDocToPdf(): void
+      - 功能：导出全部帮助文档为PDF
+      - 说明：遍历所有HTML格式的帮助文档，使用HTML转PDF库（如iTextSharp）批量转换为PDF，合并为单个PDF文件，生成目录和页码，保存到用户指定路径。
+
+6. GuideManager（引导管理类）：
+   a) CheckShowGuideOnStartup(): bool
+      - 功能：检查是否在启动时显示引导
+      - 说明：调用IniFunc.getBool("ShowGuideOnStartup", true)读取配置，首次使用时返回true，用户跳过引导后返回false。
+   
+   b) ResetGuide(): void
+      - 功能：重置引导
+      - 说明：清除引导进度和设置，调用IniFunc.writeInt("GuideCurrentStep", 0)和IniFunc.writeBool("ShowGuideOnStartup", true)，用户可以重新开始引导教程。
+   
+   c) GetGuideCompletion(): double
+      - 功能：获取引导完成度
+      - 说明：计算用户已完成的引导步骤占总步骤的百分比，返回0.0到1.0之间的值，用于显示引导进度条。
+
+================================================================================
 总结
 ================================================================================
 
@@ -663,8 +981,10 @@
 - 04_质检任务模块.drawio
 - 05_参数配置模块.drawio
 - 06_其他工具模块.drawio
+- 07_规则配置模块.drawio (新增)
+- 08_帮助模块.drawio (新增)
 
 所有类图文件均采用DrawIO XML格式，可使用DrawIO（draw.io或diagrams.net）软件打开编辑。
 
 文档编写日期：2024年
-版本：v1.0
+版本：v2.0 (新增规则配置模块和帮助模块)
