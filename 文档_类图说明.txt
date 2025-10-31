@@ -8,7 +8,7 @@
 ================================================================================
 
 1. ResignForm（用户注册窗体类）：
-   a) button1_Click(): void
+   a) RegisterButton_Click(): void
       - 功能：处理注册按钮点击事件
       - 说明：验证用户输入的手机号和密码非空，调用GetUser.hasaccount()检查账号是否已存在。如不存在，则使用SQLiteHelper执行INSERT语句创建新用户记录，包含手机号、密码和用户类型。注册成功后关闭窗体，失败时弹出错误提示（如"用户已存在"或"数据库未知错误"）。
    
@@ -21,7 +21,7 @@
       - 说明：调用getusercollection()加载用户类型，清空手机号和密码输入框，设置下拉框默认选中第一个用户类型。
 
 2. LoginForm（用户登录窗体类）：
-   a) button1_Click(): void
+   a) LoginButton_Click(): void
       - 功能：处理登录按钮点击事件
       - 说明：验证输入非空后，调用GetUser.hasaccount()检查账号存在性，再调用GetUser.updatelogin()验证密码。密码正确则更新最后登录时间，保存"记住密码"选项，创建UserBean对象保存用户信息，调用skip2main()跳转到主界面。失败时弹出相应错误提示。
    
@@ -50,15 +50,15 @@
       - 说明：根据传入的缩放比例(scaleX, scaleY)计算合适的字体大小，调整divider1、checkbox1、label系列、pageHeader2、close_btn等控件的字体，确保在不同分辨率下显示正常。
 
 3. LicenseForm（用户许可窗体类）：
-   a) button1_Click(): void
+   a) ConfirmLicenseButton_Click(): void
       - 功能：确认授权（已预留）
       - 说明：设置license标志为true，表示用户已通过授权验证。
    
-   b) button2_Click(): void
+   b) SelectLicenseFileButton_Click(): void
       - 功能：选择授权文件
       - 说明：打开文件选择对话框，设置过滤器为".lic"文件，用户选择后将文件路径显示在licText文本框中。
    
-   c) button3_Click(): void
+   c) VerifyLicenseButton_Click(): void
       - 功能：验证授权文件
       - 说明：检查licText是否为空，调用AuthManger.Verify()验证选中的授权文件是否有效。验证成功则设置license标志为true并关闭窗体，失败则弹出"授权失败"提示。
    
@@ -233,15 +233,15 @@
       - 功能：窗体加载初始化
       - 说明：根据okbtn标志显示/隐藏相应按钮，设置窗体标题为工具名称，如果menuBean不为null且ta为空，从CSV加载工具参数，调用DynamicTool.creatcontrol()动态生成参数输入控件，调整按钮位置。
    
-   e) uiButton1_Click(): void（运行按钮）
+   e) RunButton_Click(): void（运行按钮）
       - 功能：执行单个任务
       - 说明：检查是否有正在运行的任务，有则提示错误返回。调用MenuBeanFunc.GetToolFullPath()获取工具完整路径，调用ReadTextBoxValues()读取用户输入，调用GpTaskFunc.AddGpTask()添加任务到队列，注册Application.Idle事件在空闲时调用GpTaskFunc.runwhich()执行任务，关闭当前窗体。
    
-   f) uiButton2_Click(): void（添加任务按钮）
+   f) AddTaskButton_Click(): void（添加任务按钮）
       - 功能：添加任务到任务列表
       - 说明：调用ReadTextBoxValues()读取用户输入参数，检查BSM是否包含"自动"标识符。如果包含，复制参数列表创建新任务（去除"自动"标识），如果不包含则直接添加。调用GpTaskFunc.AddGpTask()将任务添加到全局任务列表。
    
-   g) ok_btn_Click(): void（确定按钮）
+   g) ConfirmButton_Click(): void（确定按钮）
       - 功能：保存参数或执行插件
       - 说明：调用ReadTextBoxValues()读取用户输入，如果是step模式或formName为"TaskListForm"，设置DialogResult为OK并关闭窗体，由调用方处理后续逻辑。
    
@@ -380,7 +380,7 @@
       - 功能：窗体加载初始化
       - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式。
    
-   b) 清空ToolStripMenuItem_Click(): void
+   b) ClearLogMenuItem_Click(): void
       - 功能：清空日志按钮点击事件
       - 说明：调用uiRichTextBox1.Clear()清空富文本框中的所有日志内容。
    
@@ -431,11 +431,11 @@
       - 功能：窗体加载初始化
       - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，调用InitializeFunc.changebuttoncolor()设置按钮颜色，调用IniFunc.getString("toolResourcePath")读取工具资源路径并显示在输入框中，初始化主题选择下拉框。
    
-   b) selectfolder_Click(): void
+   b) SelectFolderButton_Click(): void
       - 功能：选择文件夹按钮点击事件
       - 说明：创建SelectFileFunc实例，调用sf_folder()打开文件夹选择对话框，检查所选文件夹下是否存在config.csv文件。如果存在则将路径显示在输入框中，如果不存在则调用LogHelper.ErrorLog()提示错误，使窗体获得焦点。
    
-   c) ok_btn_Click(): void
+   c) ConfirmButton_Click(): void
       - 功能：确定按钮点击事件
       - 说明：拼接输入框路径和"config.csv"，检查文件是否存在。如果存在则更新globalpara.toolconfigpath，调用IniFunc.writeString()保存配置，查找主窗体(Rib)并调用LoadTreeMenu("通用检查")重新加载菜单，关闭设置窗体。
    
@@ -549,11 +549,11 @@
       - 功能：窗体加载初始化
       - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，根据tableType参数（"template"或"standard"）调用LoadTableData()加载对应的表格数据。
    
-   b) button1_Click(): void
+   b) SelectAllButton_Click(): void
       - 功能：全选按钮点击事件
       - 说明：遍历table控件的所有行，设置每行的选中状态为true。
    
-   c) button2_Click(): void
+   c) DownloadButton_Click(): void
       - 功能：下载按钮点击事件
       - 说明：调用DownloadSelected()下载选中的文件。
    
