@@ -1,0 +1,670 @@
+质检工具系统类图说明文档
+================================================================================
+
+本文档提供了质检工具系统各模块的类图详细说明，类图文件位于"类图文件"文件夹中。
+
+================================================================================
+一、用户管理模块 (类图文件: 01_用户管理模块.drawio)
+================================================================================
+
+1. ResignForm（用户注册窗体类）：
+   a) button1_Click(): void
+      - 功能：处理注册按钮点击事件
+      - 说明：验证用户输入的手机号和密码非空，调用GetUser.hasaccount()检查账号是否已存在。如不存在，则使用SQLiteHelper执行INSERT语句创建新用户记录，包含手机号、密码和用户类型。注册成功后关闭窗体，失败时弹出错误提示（如"用户已存在"或"数据库未知错误"）。
+   
+   b) getusercollection(): void
+      - 功能：加载用户类型选项
+      - 说明：从UserTypeEnum枚举中读取所有用户类型名称，添加到下拉选择框(select1)中供用户选择。
+   
+   c) ResignForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用getusercollection()加载用户类型，清空手机号和密码输入框，设置下拉框默认选中第一个用户类型。
+
+2. LoginForm（用户登录窗体类）：
+   a) button1_Click(): void
+      - 功能：处理登录按钮点击事件
+      - 说明：验证输入非空后，调用GetUser.hasaccount()检查账号存在性，再调用GetUser.updatelogin()验证密码。密码正确则更新最后登录时间，保存"记住密码"选项，创建UserBean对象保存用户信息，调用skip2main()跳转到主界面。失败时弹出相应错误提示。
+   
+   b) skip2main(): void
+      - 功能：跳转到主界面
+      - 说明：显示加载进度指示器，禁用当前窗体。如果系统安装了ArcGIS，启动定时器等待GIS初始化完成（resignGIS标志为true）。初始化完成后隐藏登录窗体，创建并显示主界面(Rib)。
+   
+   c) getlastlogin(): void
+      - 功能：获取上次登录信息
+      - 说明：调用GetUser.getlastlogin()获取最后一次登录的用户信息，自动填充手机号输入框。如果用户选择了"记住密码"，则同时填充密码框。
+   
+   d) IsArcGISDesktopInstalled(): bool
+      - 功能：检查ArcGIS Desktop是否已安装
+      - 说明：读取注册表路径检查ArcGIS是否安装及版本号。如果未安装或版本不是10.8，弹出相应提示信息。返回true表示已安装，false表示未安装。
+   
+   e) SaveOriginalControlBounds(): void
+      - 功能：保存所有控件的原始位置和大小
+      - 说明：递归遍历窗体所有控件，将每个控件的位置(Location)、大小(Size)和字体(Font)保存到Dictionary中，用于后续恢复或调整界面布局。
+   
+   f) RestoreOriginalControlBounds(): void
+      - 功能：恢复控件到原始设计位置
+      - 说明：设置窗体为固定大小(1268x736)，计算屏幕居中位置，遍历originalBounds字典将所有控件恢复到初始位置、大小和字体设置。
+   
+   g) AdjustFontSizes(): void
+      - 功能：调整控件字体大小以适应不同DPI
+      - 说明：根据传入的缩放比例(scaleX, scaleY)计算合适的字体大小，调整divider1、checkbox1、label系列、pageHeader2、close_btn等控件的字体，确保在不同分辨率下显示正常。
+
+3. LicenseForm（用户许可窗体类）：
+   a) button1_Click(): void
+      - 功能：确认授权（已预留）
+      - 说明：设置license标志为true，表示用户已通过授权验证。
+   
+   b) button2_Click(): void
+      - 功能：选择授权文件
+      - 说明：打开文件选择对话框，设置过滤器为".lic"文件，用户选择后将文件路径显示在licText文本框中。
+   
+   c) button3_Click(): void
+      - 功能：验证授权文件
+      - 说明：检查licText是否为空，调用AuthManger.Verify()验证选中的授权文件是否有效。验证成功则设置license标志为true并关闭窗体，失败则弹出"授权失败"提示。
+   
+   d) LicenseForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：清空授权文件路径，设置机器码输入框为只读，调用AuthManger.GetMachineCode()和AuthManger.GetEncryUserInfo()获取当前设备的机器码和加密用户信息并显示。
+   
+   e) LicenseForm_FormClosed(): void
+      - 功能：窗体关闭事件处理
+      - 说明：查找已打开的主窗体(Rib)，如果未通过授权验证(license为false)则关闭主窗体，否则启用主窗体并使其获得焦点。
+
+4. GetUser（用户数据访问类）：
+   a) getlastlogin(): Dictionary<string, object>
+      - 功能：获取最后一次登录的用户信息
+      - 说明：连接SQLite数据库，执行查询"select * from (select * from user_account order by lastlogintime desc) limit 1"获取最近登录记录，返回包含phone、password、usertype、remindpassword等字段的字典。
+   
+   b) getuserpassword(phone: string): string
+      - 功能：根据手机号获取用户密码
+      - 说明：执行SQL查询"SELECT password FROM user_account where phone='{phone}'"，返回对应的密码字符串，找不到则返回空字符串。
+   
+   c) updatelogin(phone: string, password: string, remindpass: string): bool
+      - 功能：更新登录信息
+      - 说明：首先调用getuserpassword()验证密码是否正确，正确则调用GetNowTime.nowtime2()获取当前时间戳，执行UPDATE语句更新lastlogintime和remindpassword字段，同时调用Clear_fragment()整理数据库碎片。返回true表示登录成功，false表示密码错误。
+   
+   d) getuserlist(): List<string>
+      - 功能：获取所有用户手机号列表
+      - 说明：执行"SELECT phone FROM user_account"查询，返回所有用户的手机号字符串列表。
+   
+   e) hasaccount(phone: string): bool
+      - 功能：检查账号是否存在
+      - 说明：调用getuserlist()获取所有账号列表，使用Contains方法判断指定手机号是否在列表中。返回true表示账号已存在，false表示不存在。
+   
+   f) Clear_fragment(): void
+      - 功能：整理数据库碎片
+      - 说明：创建SQLiteHelper实例，调用VACUUM()方法对数据库进行碎片整理，优化数据库性能和存储空间。
+
+5. SQLiteHelper（数据库操作辅助类）：
+   a) ExecuteNonQuery(sql: string): int
+      - 功能：执行非查询SQL语句
+      - 说明：执行INSERT、UPDATE、DELETE等修改数据的SQL语句，返回受影响的行数。如果执行失败抛出异常，调用方需要处理异常。
+   
+   b) GetRowDatas(sql: string): List<Dictionary>
+      - 功能：执行查询并返回结果集
+      - 说明：执行SELECT查询语句，将结果集转换为Dictionary列表返回，每个Dictionary代表一行数据，键为列名，值为对应的字段值。
+   
+   c) Close(): void
+      - 功能：关闭数据库连接
+      - 说明：释放SQLite连接资源，确保数据库文件不被锁定，允许其他进程访问。
+   
+   d) VACUUM(): void
+      - 功能：执行数据库碎片整理
+      - 说明：执行SQLite的VACUUM命令，清理已删除数据占用的空间，重建数据库文件，优化查询性能。
+
+================================================================================
+二、主页展示模块 (类图文件: 02_主页展示模块.drawio)
+================================================================================
+
+1. Rib（主界面类）：
+   a) Rib_Load(): void
+      - 功能：主界面加载初始化
+      - 说明：调用InitializeFunc.toolResourcePath()加载工具资源路径，绑定Resize事件，配置悬浮按钮用于切换主页和地图视图，调用UpdateRibbonIcons()设置图标颜色，最大化窗口，加载一级菜单，初始化tree1为"通用检查"菜单，绑定所有Ribbon按钮点击事件，初始化菜单搜索功能，默认显示广告页，调用InitializeFunc.loadmainlog()加载日志窗体，检查默认工作空间，初始化默认任务。
+   
+   b) InitializeArcGisControls(): void
+      - 功能：动态初始化ArcGIS控件
+      - 说明：创建并初始化axMapControl1（地图控件）、axTOCControl1（图层目录控件）、axToolbarControl1和axToolbarControl2（工具栏控件），设置控件的Dock、Size、Location等属性，添加到相应的Panel中，设置Buddy关联，绑定鼠标和点击事件，创建右键菜单，初始化图层拖拽功能，设置globalpara.isArcGisInitialized标志为true。
+   
+   c) arcGisInitButton_Click(): void
+      - 功能：处理地图控件加载按钮点击
+      - 说明：禁用按钮防止重复点击，创建临时加载窗体显示"正在加载，请稍候..."，在后台线程中调用InitializeArcGisControls()初始化ArcGIS控件，完成后关闭临时窗体，隐藏加载按钮，显示地图控件，还原鼠标样式。
+   
+   d) LoadTreeMenu(menuName: string): void
+      - 功能：加载指定一级菜单的树形结构
+      - 说明：调用FirstLevelMenuFunc.loadsubmenu()加载指定菜单名称（如"通用检查"、"项目检查"、"数据处理与评分统计"）的二级和三级菜单项，构建树形控件(tree1)的节点结构，每个节点的Tag属性保存对应的MenuBean对象。
+   
+   e) UpdateRibbonIcons(colors: string[]): void
+      - 功能：更新Ribbon图标颜色
+      - 说明：接收颜色数组参数，遍历所有Ribbon按钮，根据按钮名称加载对应的SVG图标，应用指定的颜色主题，刷新按钮显示。支持蓝色、绿色、黄色、紫色、黑色五种主题。
+   
+   f) resize_picPanel(): void
+      - 功能：调整图片展示面板大小
+      - 说明：根据父容器大小调整主页图片展示区域的宽度和高度，确保图片在不同分辨率下正常显示，保持界面美观。
+   
+   g) Rib_Resize(): void
+      - 功能：处理窗体大小变化事件
+      - 说明：监听窗体状态变化（最大化/还原），当状态改变时调整菜单栏分隔距离(munesplitter.SplitterDistance)为320像素，保持界面布局稳定。
+   
+   h) Rib_FormClosing(): void
+      - 功能：窗体关闭事件处理
+      - 说明：查找并关闭登录窗体(LoginForm)，可选择性中断正在执行的GP工具进程，确保资源正确释放。
+
+2. FirstLevelMenuFunc（一级菜单功能类）：
+   a) loadsubmenu(menu, foldername: string, tree: Tree): void
+      - 功能：加载二级和三级菜单
+      - 说明：根据foldername（一级菜单名称）调用CreateMenuFromCsv2()生成树形菜单项，清空tree控件，将生成的菜单项添加到tree中，默认展开所有一级节点。
+   
+   b) CreateMenuFromCsv2(foldername: string): List<TreeItem>
+      - 功能：从CSV配置文件创建菜单项
+      - 说明：读取globalpara.toolconfigpath指向的config.csv文件，通过FilterByFolder()过滤出指定foldername的所有行，按toolboxName分组，调用CreateTreeItemsRecursive()递归构建树形结构，每个TreeItem的Tag属性保存MenuBean对象，IconSvg属性加载对应的SVG图标。
+   
+   c) GetUniqueFirstColumn(csvpath: string, index: int): List<string>
+      - 功能：获取CSV文件指定列的唯一值
+      - 说明：读取CSV文件的指定列（由index参数指定，通常为0表示folderName列），去重后返回唯一值列表，用于获取所有一级菜单名称。
+   
+   d) CreateTreeItemsRecursive(data): TreeItem
+      - 功能：递归创建树形菜单项
+      - 说明：根据MenuBean的层级关系（toolboxName -> toolsetName -> toolName）递归构建树形结构，设置每个节点的Text、Tag、IconSvg、Expand等属性，支持工具箱和工具集的展开/折叠。
+   
+   e) FilterByFolder(lines: List<string>, foldername: string): List<string>
+      - 功能：过滤CSV行数据
+      - 说明：遍历CSV文件的所有行，筛选出folderName列等于指定foldername的行，返回过滤后的行列表。
+
+3. InitializeFunc（系统初始化功能类）：
+   a) checkDefaultWorkspace(): void
+      - 功能：检查默认工作空间
+      - 说明：获取用户的"我的文档"路径，拼接"ArcGIS/Default.gdb"，检查该GDB是否存在。如果不存在，调用GDB_Func.creatGDB()创建新的地理数据库，将路径保存到globalpara.defaultGdbPath。
+   
+   b) toolResourcePath(): void
+      - 功能：加载工具资源路径配置
+      - 说明：调用IniFunc.getString("toolResourcePath")读取配置的工具资源路径，如果文件存在则更新globalpara.toolconfigpath为该路径。
+   
+   c) checkversion(form: Rib): void
+      - 功能：检查ArcGIS版本
+      - 说明：启动定时器，在后台线程中调用GpFunc.gp_getversion()获取ArcGIS版本号，通过LogHelper.gpstrspilter()解析版本字符串。如果版本为"10.8.1"，启用form的ArcGIS相关控件（axTOCControl1、axToolbarControl1、axToolbarControl2、axMapControl1），停止定时器。
+   
+   d) loadmainlog(): void
+      - 功能：隐形加载日志窗体
+      - 说明：创建MainLogForm实例，设置透明度为0（完全透明），调用Show()后立即Hide()，实现后台加载日志窗体，确保日志功能可用但不影响用户界面。
+   
+   e) InitializeGIS(): void
+      - 功能：初始化ArcGIS引擎
+      - 说明：绑定ArcGIS Desktop产品代码，创建AoInitialize对象，请求Advanced（ArcInfo）许可级别。如果许可初始化失败，弹出"没有ArcGIS许可！"消息框并退出应用程序。
+   
+   f) ShowForm<T>(): void
+      - 功能：通用窗体显示方法
+      - 说明：泛型方法，检查指定类型的窗体是否已打开。如果已打开则调用Show()和Activate()使其显示并获得焦点，如果未打开则创建新实例并显示。
+   
+   g) changebuttoncolor(btn: UISymbolButton): void
+      - 功能：设置按钮颜色样式
+      - 说明：设置SunnyUI按钮的符号颜色、边框颜色、前景色、填充色、悬停颜色等属性，实现统一的按钮主题样式。
+
+4. TourPopover（引导教程类）：
+   a) ShowTour(): void
+      - 功能：显示引导教程
+      - 说明：显示引导弹窗，高亮当前步骤对应的界面元素，展示标题和内容说明，显示"上一步"、"下一步"、"关闭"按钮。
+   
+   b) HideTour(): void
+      - 功能：隐藏引导教程
+      - 说明：隐藏引导弹窗，移除高亮效果，恢复正常界面。
+   
+   c) NextStep(): void
+      - 功能：进入下一步引导
+      - 说明：更新当前步骤索引，加载下一步的标题和内容，移动弹窗到新位置，高亮新的目标元素。如果已是最后一步，"下一步"按钮文字改为"完成"。
+
+================================================================================
+三、质检工具模块 (类图文件: 03_质检工具模块.drawio)
+================================================================================
+
+1. ToolForm（工具窗体类）：
+   a) ToolForm(menuBean: MenuBean)
+      - 功能：通过菜单对象构造工具窗体
+      - 说明：保存menuBean和toolName，初始化组件，从config.csv加载工具参数配置生成ToolArgs列表，okbtn设为false表示显示"运行"和"添加任务"按钮。
+   
+   b) ToolForm(tals: List<ToolArgs>, formName: string)
+      - 功能：通过参数列表和窗体名称构造
+      - 说明：用于编辑现有任务，保存参数列表和窗体名称，okbtn设为true表示显示"确定"按钮，用于保存编辑后的参数。
+   
+   c) ToolForm(tals: List<ToolArgs>, step: bool)
+      - 功能：通过参数列表和步骤标志构造
+      - 说明：用于分步执行任务，step为true时表示逐步执行模式，okbtn设为true，执行后返回DialogResult.OK并关闭窗体。
+   
+   d) ToolForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：根据okbtn标志显示/隐藏相应按钮，设置窗体标题为工具名称，如果menuBean不为null且ta为空，从CSV加载工具参数，调用DynamicTool.creatcontrol()动态生成参数输入控件，调整按钮位置。
+   
+   e) uiButton1_Click(): void（运行按钮）
+      - 功能：执行单个任务
+      - 说明：检查是否有正在运行的任务，有则提示错误返回。调用MenuBeanFunc.GetToolFullPath()获取工具完整路径，调用ReadTextBoxValues()读取用户输入，调用GpTaskFunc.AddGpTask()添加任务到队列，注册Application.Idle事件在空闲时调用GpTaskFunc.runwhich()执行任务，关闭当前窗体。
+   
+   f) uiButton2_Click(): void（添加任务按钮）
+      - 功能：添加任务到任务列表
+      - 说明：调用ReadTextBoxValues()读取用户输入参数，检查BSM是否包含"自动"标识符。如果包含，复制参数列表创建新任务（去除"自动"标识），如果不包含则直接添加。调用GpTaskFunc.AddGpTask()将任务添加到全局任务列表。
+   
+   g) ok_btn_Click(): void（确定按钮）
+      - 功能：保存参数或执行插件
+      - 说明：调用ReadTextBoxValues()读取用户输入，如果是step模式或formName为"TaskListForm"，设置DialogResult为OK并关闭窗体，由调用方处理后续逻辑。
+   
+   h) ReadTextBoxValues(): void
+      - 功能：读取控件值到参数列表
+      - 说明：遍历ToolArgs列表，在窗体的SplitContainer.Panel1中查找名为"txt_"+argName或"combox"+argName的控件，读取UITextBox的Text或UIComboBox的SelectedItem值，更新ToolArgs的nowValue或replaceValue属性。
+
+2. MenuBean（菜单实体类）：
+   - 说明：存储工具菜单配置信息，包含folderName（一级菜单名）、toolboxName（工具箱名）、toolboxExpand（工具箱是否展开）、toolsetName（工具集名）、toolsetExpand（工具集是否展开）、toolName（工具名）。从config.csv文件读取生成。
+
+3. ToolArgs（工具参数实体类）：
+   a) CreatArgBean(line: string): ToolArgs
+      - 功能：从CSV行创建参数对象
+      - 说明：解析CSV行字符串，按逗号分割获取各字段值（folderName、toolboxName、toolsetName、toolName、argName、argType、direction、defalutValue等），创建并返回ToolArgs对象。支持argType字符串转枚举、direction字符串转枚举。
+
+4. MenuBeanFunc（菜单功能处理类）：
+   a) GetToolFullPath(menuBean: MenuBean): string
+      - 功能：获取工具的完整路径
+      - 说明：获取config.csv所在目录作为baseDir，拼接menuBean的folderName、toolboxName+".tbx"、toolName，返回完整的工具路径字符串，用于GP工具执行。
+   
+   b) CreatBean(line: string): MenuBean
+      - 功能：从CSV行创建菜单对象
+      - 说明：解析CSV行，按逗号分割获取folderName、toolboxName、toolboxExpand、toolsetName、toolsetExpand、toolName字段，调用str2bool()将"是"/"否"转换为布尔值，返回MenuBean对象。
+   
+   c) str2bool(instr: string): bool
+      - 功能：字符串转布尔值
+      - 说明：如果输入字符串为"是"返回true，否则返回false。
+
+5. MenuSearchFunc2（工具搜索类）：
+   a) MenuSearchFunc2(menu: Tree, input: Input)
+      - 功能：构造函数初始化搜索功能
+      - 说明：保存tree控件和input输入框引用，调用init()初始化定时器（延迟500毫秒），调用getcombine()合并所有一级菜单项到combineMenu。
+   
+   b) onTextChanged(sender, e): void
+      - 功能：输入框文本变化事件
+      - 说明：停止并重新启动定时器，实现延迟搜索（用户停止输入0.5秒后才执行搜索），避免频繁搜索影响性能。
+   
+   c) search(): void
+      - 功能：执行搜索
+      - 说明：获取输入框文本，如果为空则显示所有菜单项，如果不为空则调用SearchMenuItems()递归搜索匹配项，清空tree控件，创建"搜索结果"根节点，添加匹配的子节点，展开所有节点。
+   
+   d) onTimerTick(sender, e): void
+      - 功能：定时器触发事件
+      - 说明：调用search()执行搜索，停止定时器。
+   
+   e) getcombine(): void
+      - 功能：合并所有一级菜单
+      - 说明：调用FirstLevelMenuFunc.GetUniqueFirstColumn()获取所有一级菜单名称列表，遍历每个foldername调用CreateMenuFromCsv2()生成菜单项，将所有菜单项添加到combineMenu的"搜索"根节点下，便于全局搜索。
+   
+   f) SearchMenuItems(source: TreeItem, text: string, target: TreeItem): void
+      - 功能：递归搜索菜单项
+      - 说明：遍历source的所有子节点，检查节点Text是否包含搜索文本（忽略大小写），如果匹配则复制节点（包含Tag、IconSvg等属性）添加到target。如果节点有子节点，递归调用自身搜索子节点。
+
+6. csvFunc（配置读取类）：
+   a) LoadToolConfig(menuBean: MenuBean, csvpath: string): List<string>
+      - 功能：加载工具配置
+      - 说明：读取csvpath指向的config.csv文件，过滤出folderName、toolboxName、toolName匹配menuBean的所有行，返回这些行的字符串列表，用于生成工具参数。
+   
+   b) LoadTaskCache(csvpath: string): List<ToolArgs>
+      - 功能：加载任务缓存
+      - 说明：读取任务缓存CSV文件（格式与config.csv相同但包含用户输入的参数值），逐行解析创建ToolArgs对象，返回ToolArgs列表，用于恢复保存的任务。
+   
+   c) ReadCsvFile(csvpath: string): List<string>
+      - 功能：读取CSV文件
+      - 说明：使用GB2312编码读取CSV文件，跳过第一行（表头），返回所有数据行的字符串列表。
+
+================================================================================
+四、质检任务模块 (类图文件: 04_质检任务模块.drawio)
+================================================================================
+
+1. GpTaskFunc（任务管理类）：
+   a) saveTask2csv(csvPath: string): void
+      - 功能：保存任务列表到CSV文件
+      - 说明：遍历globalpara.GpBeanList中的所有任务，将每个任务的ToolArgs列表转换为CSV格式的行，包含folderName、toolboxName、toolsetName、toolName、argName、argType、direction、defalutValue、BSM、nowValue字段。读取现有CSV的表头，将表头和新数据组合后使用GB2312编码写入文件。异常时调用LogHelper.ErrorLog()记录错误。
+   
+   b) SortGpBeanList(): void
+      - 功能：任务执行优先级排序
+      - 说明：对globalpara.GpBeanList排序，优先级规则：1）栅格检查工具箱优先级为1；2）海岸带工具箱优先级为2；3）其他工具箱优先级为0；4）自定义任务（BSM不以"自动_"开头）在自动任务之前。排序后更新全局任务列表。
+   
+   c) addTaskByCache(csvpath: string): void
+      - 功能：从缓存文件添加任务
+      - 说明：清空全局任务列表，刷新TaskListForm界面，调用csvFunc.LoadTaskCache()加载CSV中的任务，按toolName分组（同一工具的参数组成一个任务），创建MenuBean和ToolArgs列表，根据toolboxName判断任务类型（栅格检查、海岸带为自动任务，其他为普通任务），生成唯一BSM标识，调用AddGpTask()添加任务，最后调用SortGpBeanList()排序并刷新界面。
+   
+   d) AddGpTask(menuBean: MenuBean, ta: List<ToolArgs>): string
+      - 功能：添加任务（简化版）
+      - 说明：调用重载方法AddGpTask(menuBean, ta, GpStateEnum.未开始)，使用默认状态"未开始"和自动生成的BSM，返回任务的BSM标识。
+   
+   e) AddGpTask(menuBean, ta, state, bsm, showInfo): string
+      - 功能：添加或更新任务（完整版）
+      - 说明：如果bsm非空，查找是否存在相同BSM的任务。存在则更新该任务的menuBean、toolArglist、state；不存在则调用CreateNewTask()创建新任务。如果bsm为空，生成新的GUID作为BSM并创建任务。刷新TaskListForm界面，根据showInfo参数决定是否记录日志，返回任务的BSM。
+   
+   f) CreateNewTask(menuBean, ta, state, bsm): void
+      - 功能：创建新任务
+      - 说明：创建GpBean对象，设置menuBean、toolArglist、state、BSM属性，添加到globalpara.GpBeanList，记录任务创建日志。
+   
+   g) runwhich(step: bool, bsmList: List<string>): void
+      - 功能：执行任务
+      - 说明：根据step参数决定是逐步执行还是批量执行。批量执行时合并同名参数，弹出参数编辑窗体让用户统一设置，确认后依次执行bsmList中的所有任务。逐步执行时依次弹出每个任务的参数窗体，用户确认后执行当前任务再进入下一个。调用GpFunc.gp_execute()执行GP工具，更新任务状态，记录开始/结束时间，处理执行结果和错误信息。
+   
+   h) stopgptask(): void
+      - 功能：停止GP任务
+      - 说明：调用GpFunc.gp_cancel()取消正在执行的GP工具，遍历任务列表将所有"运行中"状态的任务改为"未开始"，记录停止日志，刷新TaskListForm界面。
+   
+   i) deltask(bsm: string): void
+      - 功能：删除指定任务
+      - 说明：根据BSM从globalpara.GpBeanList中移除对应的GpBean对象，记录删除日志，刷新TaskListForm界面。
+   
+   j) deltaskbysimilar(bsm: string): void
+      - 功能：删除相似任务
+      - 说明：提取bsm的前缀（去除最后的GUID部分），查找所有BSM包含该前缀的任务，批量删除，用于删除同一来源的多个自动生成任务。
+   
+   k) moveTaskUp(bsm: string): void
+      - 功能：任务上移
+      - 说明：根据BSM查找任务在列表中的索引，如果不是第一个任务，与前一个任务交换位置，调用SortGpBeanList()重新排序可能影响自动任务优先级，刷新TaskListForm界面。
+   
+   l) moveTaskDown(bsm: string): void
+      - 功能：任务下移
+      - 说明：根据BSM查找任务在列表中的索引，如果不是最后一个任务，与后一个任务交换位置，刷新TaskListForm界面。
+   
+   m) GetTaskByBSM(bsm: string): GpBean
+      - 功能：根据BSM获取任务对象
+      - 说明：使用LINQ查询globalpara.GpBeanList，返回BSM匹配的第一个GpBean对象，找不到则返回null。
+
+2. GpBean（任务实体类）：
+   - 说明：存储单个任务的完整信息，包括menuBean（工具信息）、toolArglist（参数列表）、state（任务状态）、BSM（唯一标识）、startTime（开始时间）、endTime（结束时间）、result（执行结果）。
+
+3. GpStateEnum（任务状态枚举）：
+   - 未开始：任务已添加但尚未执行
+   - 队列中：任务等待执行
+   - 运行中：任务正在执行
+   - 已完成：任务执行成功
+   - 失败：任务执行失败
+
+4. MainLogForm（运行日志窗体类）：
+   a) MainLogForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式。
+   
+   b) 清空ToolStripMenuItem_Click(): void
+      - 功能：清空日志按钮点击事件
+      - 说明：调用uiRichTextBox1.Clear()清空富文本框中的所有日志内容。
+   
+   c) OnClosing(e: CancelEventArgs): void
+      - 功能：重写窗体关闭事件
+      - 说明：不真正关闭窗体，而是设置Visible为false隐藏窗体，设置e.Cancel为true取消关闭操作，保持窗体实例存在，后续可快速显示日志。
+
+5. LogHelper（日志工具类）：
+   a) normallog(message: string): void
+      - 功能：记录普通日志
+      - 说明：调用getMainLogForm()获取日志窗体，调用AppendLog()在富文本框中追加日志消息，使用黑色字体，添加时间戳前缀。
+   
+   b) ErrorLog(title: string, message: string): void
+      - 功能：记录错误日志并弹窗提示
+      - 说明：调用AppendLog()以红色字体记录错误信息，同时使用AntdUI.Modal.open()弹出错误提示对话框，标题为title，内容为message，图标类型为Error。
+   
+   c) Infonotice(title: string, message: string): void
+      - 功能：弹出信息提示
+      - 说明：使用AntdUI.Modal.open()弹出信息提示对话框，标题为title，内容为message，图标类型为Info，按钮样式为渐变色。
+   
+   d) gpstrspilter(gpstr: string): string
+      - 功能：解析GP工具输出字符串
+      - 说明：GP工具返回的字符串可能包含多行信息和特殊字符，此方法提取关键信息（如版本号、执行结果），去除无用内容，返回格式化后的字符串。
+   
+   e) getMainLogForm(): MainLogForm
+      - 功能：获取日志窗体实例
+      - 说明：使用Application.OpenForms.OfType<MainLogForm>().FirstOrDefault()查找已打开的MainLogForm实例，如果找不到则创建新实例，返回窗体对象。
+   
+   f) AppendLog(message: string, color: Color): void
+      - 功能：向日志窗体追加日志
+      - 说明：获取MainLogForm实例，在uiRichTextBox1中追加带颜色的文本，格式为"[HH:mm:ss] message\n"，自动滚动到最新日志。
+
+6. DefaultTaskInitializer（任务初始化类）：
+   a) InitializeAllDefaultTasks(): void
+      - 功能：初始化所有默认任务
+      - 说明：遍历预定义的任务名称列表，对每个任务调用InitializeTask()方法，加载对应的CSV文件，创建默认任务模板。
+   
+   b) InitializeTask(taskName: string, csvFile: string): void
+      - 功能：初始化单个默认任务
+      - 说明：检查csvFile是否存在，调用GpTaskFunc.addTaskByCache()加载CSV中的任务配置，记录初始化日志，异常时记录错误日志。
+
+================================================================================
+五、参数配置模块 (类图文件: 05_参数配置模块.drawio)
+================================================================================
+
+1. SettingForm（设置窗体类）：
+   a) SettingForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，调用InitializeFunc.changebuttoncolor()设置按钮颜色，调用IniFunc.getString("toolResourcePath")读取工具资源路径并显示在输入框中，初始化主题选择下拉框。
+   
+   b) selectfolder_Click(): void
+      - 功能：选择文件夹按钮点击事件
+      - 说明：创建SelectFileFunc实例，调用sf_folder()打开文件夹选择对话框，检查所选文件夹下是否存在config.csv文件。如果存在则将路径显示在输入框中，如果不存在则调用LogHelper.ErrorLog()提示错误，使窗体获得焦点。
+   
+   c) ok_btn_Click(): void
+      - 功能：确定按钮点击事件
+      - 说明：拼接输入框路径和"config.csv"，检查文件是否存在。如果存在则更新globalpara.toolconfigpath，调用IniFunc.writeString()保存配置，查找主窗体(Rib)并调用LoadTreeMenu("通用检查")重新加载菜单，关闭设置窗体。
+   
+   d) SettingForm_FormClosed(): void
+      - 功能：窗体关闭事件
+      - 说明：查找主窗体(Rib)，使其pageHeader1获得焦点，确保用户操作焦点返回主界面。
+   
+   e) InitializeThemeComboBox(): void
+      - 功能：初始化主题选择下拉框
+      - 说明：添加"蓝色、绿色、黄色、紫色、黑色"五个选项到uiComboBox1，设置默认选中"蓝色"，绑定SelectedIndexChanged事件。
+   
+   f) UnComboBox1_SelectedIndexChanged(): void
+      - 功能：主题选择改变事件
+      - 说明：获取选中的主题名称，根据不同主题调用ThemeColor.ApplyTheme()应用对应的颜色方案，定义svgColors数组（4个颜色值），查找主窗体(Rib)调用UpdateRibbonIcons()更新图标颜色。
+
+2. IniFunc（配置文件管理类）：
+   a) getString(key: string): string
+      - 功能：读取字符串配置
+      - 说明：读取INI配置文件（通常为项目目录下的config.ini），根据key查找对应的值，返回字符串。找不到则返回空字符串。
+   
+   b) writeString(key: string, value: string): void
+      - 功能：写入字符串配置
+      - 说明：将键值对写入INI配置文件，如果key已存在则更新value，如果不存在则添加新键值对，保存文件。
+   
+   c) getInt(key: string, defaultValue: int): int
+      - 功能：读取整数配置
+      - 说明：读取INI文件中的key值，尝试解析为整数，成功则返回整数值，失败则返回defaultValue。
+   
+   d) writeInt(key: string, value: int): void
+      - 功能：写入整数配置
+      - 说明：将整数值转换为字符串后写入INI文件。
+   
+   e) getBool(key: string, defaultValue: bool): bool
+      - 功能：读取布尔配置
+      - 说明：读取INI文件中的key值，尝试解析为布尔值（true/false、1/0、yes/no），成功则返回布尔值，失败则返回defaultValue。
+
+3. ThemeColor（主题颜色类）：
+   a) ApplyTheme(color1, color2, color3, color4): void
+      - 功能：应用主题颜色
+      - 说明：接收4个颜色参数（十六进制字符串如"#66ccff"），更新全局主题配置，遍历所有已打开的窗体，更新其背景色、前景色、按钮颜色等，刷新界面显示。
+   
+   b) GetCurrentTheme(): string[]
+      - 功能：获取当前主题颜色数组
+      - 说明：返回当前应用的4个主题颜色字符串数组，用于保存配置或恢复主题。
+
+4. SaveProject（工程保存类）：
+   a) SaveProjectFile(path: string): bool
+      - 功能：保存工程文件
+      - 说明：创建INI格式的工程文件，保存任务列表路径、地图文档路径、工具资源路径、主题颜色等配置信息到指定path，成功返回true，失败返回false并记录日志。
+   
+   b) OpenProjectFile(path: string): bool
+      - 功能：打开工程文件
+      - 说明：读取INI格式的工程文件，解析配置信息，调用LoadTaskList()加载任务列表，如果地图控件已初始化则调用LoadMapDocument()加载地图文档，恢复主题颜色和工具资源路径，成功返回true，失败返回false并记录日志。
+   
+   c) SaveTaskList(): void
+      - 功能：保存任务列表
+      - 说明：调用GpTaskFunc.saveTask2csv()将当前任务列表保存到工程目录下的tasks.csv文件。
+   
+   d) LoadTaskList(): void
+      - 功能：加载任务列表
+      - 说明：检查工程目录下的tasks.csv文件是否存在，存在则调用GpTaskFunc.addTaskByCache()加载任务到全局任务列表。
+   
+   e) SaveMapDocument(): void
+      - 功能：保存地图文档
+      - 说明：如果地图控件已初始化，获取axMapControl1.Map，调用IMapDocument.Save()保存为.mxd文件到工程目录。
+   
+   f) LoadMapDocument(): void
+      - 功能：加载地图文档
+      - 说明：检查工程目录下的.mxd文件是否存在，存在则创建IMapDocument对象，打开文档，将Map赋值给axMapControl1.Map，刷新地图显示。
+
+5. SelectFileFunc（文件选择类）：
+   a) sf_folder(): string
+      - 功能：选择文件夹
+      - 说明：创建FolderBrowserDialog，显示文件夹选择对话框，用户选择后返回文件夹完整路径，取消则返回空字符串。
+   
+   b) sf_file(filter: string): string
+      - 功能：选择单个文件
+      - 说明：创建OpenFileDialog，设置文件类型过滤器（如"*.shp|*.shp"），显示文件选择对话框，用户选择后返回文件完整路径，取消则返回空字符串。
+   
+   c) sf_files(filter: string): string[]
+      - 功能：选择多个文件
+      - 说明：创建OpenFileDialog，设置Multiselect为true，显示文件选择对话框，用户选择后返回文件路径数组，取消则返回空数组。
+   
+   d) sf_saveFile(filter: string): string
+      - 功能：选择保存文件路径
+      - 说明：创建SaveFileDialog，设置文件类型过滤器，显示保存对话框，用户选择后返回保存路径，取消则返回空字符串。
+
+6. globalpara（全局参数类）：
+   - 说明：静态类，存储全局配置参数和运行时状态：
+     - dbpath: SQLite数据库文件路径
+     - toolconfigpath: config.csv文件路径
+     - defaultGdbPath: 默认地理数据库路径
+     - isArcGisInitialized: ArcGIS控件是否已初始化
+     - GpBeanList: 全局任务列表
+
+================================================================================
+六、其他工具模块 (类图文件: 06_其他工具模块.drawio)
+================================================================================
+
+1. UpdateInfoForm（软件信息窗体类）：
+   a) UpdateInfoForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，调用LoadVersionInfo()加载版本信息。
+   
+   b) LoadVersionInfo(): void
+      - 功能：加载版本信息
+      - 说明：读取程序集版本号、构建日期，从资源文件或外部文件加载更新日志、技术支持单位、联系方式等信息，格式化后显示在richTextBox1中。
+
+2. TableForm（模板下载/标准查阅窗体类）：
+   a) TableForm_Load(): void
+      - 功能：窗体加载初始化
+      - 说明：调用ControlPreSet.SetpageHeader()设置页眉样式，根据tableType参数（"template"或"standard"）调用LoadTableData()加载对应的表格数据。
+   
+   b) button1_Click(): void
+      - 功能：全选按钮点击事件
+      - 说明：遍历table控件的所有行，设置每行的选中状态为true。
+   
+   c) button2_Click(): void
+      - 功能：下载按钮点击事件
+      - 说明：调用DownloadSelected()下载选中的文件。
+   
+   d) LoadTableData(): void
+      - 功能：加载表格数据
+      - 说明：根据tableType读取对应目录下的文件列表（模板文件或标准文档PDF），创建DataTable包含"文件名"、"大小"、"修改日期"等列，绑定到table控件，添加复选框列用于选择。
+   
+   e) DownloadSelected(): void
+      - 功能：下载选中文件
+      - 说明：遍历table选中的行，获取文件路径，调用SelectFileFunc.sf_saveFile()让用户选择保存位置，使用File.Copy()复制文件到指定位置，记录下载日志。
+
+3. JTGJ（截图工具类）：
+   a) StartCapture(): void
+      - 功能：开始截图
+      - 说明：隐藏主窗体，设置isCapturing为true，创建全屏透明窗体覆盖整个屏幕，绑定鼠标按下、移动、释放事件，用户拖动鼠标框选区域。
+   
+   b) SaveScreenshot(path: string): void
+      - 功能：保存截图
+      - 说明：将截图的Bitmap对象保存为指定路径的PNG或JPG文件，记录保存日志，弹出"截图已保存"提示。
+   
+   c) CaptureScreen(): Bitmap
+      - 功能：捕获屏幕区域
+      - 说明：根据startPoint和endPoint计算矩形区域，创建对应大小的Bitmap，使用Graphics.CopyFromScreen()复制屏幕内容到Bitmap，返回截图对象。
+
+4. AuthManger（授权管理类）：
+   a) GetMachineCode(): string
+      - 功能：获取机器码
+      - 说明：读取CPU ID、主板序列号、MAC地址等硬件信息，使用MD5或SHA256算法生成唯一的机器码字符串，返回32位或64位的十六进制字符串。
+   
+   b) GetEncryUserInfo(): string
+      - 功能：获取加密用户信息
+      - 说明：获取计算机名、用户名、系统版本等信息，使用AES或RSA算法加密，返回加密后的Base64字符串。
+   
+   c) Verify(licPath: string): bool
+      - 功能：验证授权文件
+      - 说明：读取.lic授权文件内容，调用ValidateLicense()验证授权文件是否与当前机器码匹配、是否在有效期内、是否被篡改。验证通过返回true，失败返回false。
+   
+   d) GenerateLicense(machineCode: string): string
+      - 功能：生成授权文件内容
+      - 说明：将机器码、有效期、产品信息等数据使用RSA私钥签名，生成授权文件内容，返回加密后的字符串。
+   
+   e) ValidateLicense(lic: string, machineCode: string): bool
+      - 功能：验证授权文件合法性
+      - 说明：使用RSA公钥解密授权文件，提取机器码和有效期，对比当前机器码是否匹配，检查是否过期，验证签名是否正确。
+
+5. GpFunc（GP工具执行类）：
+   a) gp_execute(toolPath: string, args: List<ToolArgs>): IGeoProcessorResult
+      - 功能：执行GP工具
+      - 说明：创建Geoprocessor对象，设置OverwriteOutput为true，调用BuildParameters()构建参数数组，调用Execute()执行工具，等待执行完成，调用GetToolMessages()获取执行信息，返回IGeoProcessorResult对象。
+   
+   b) gp_getversion(): string
+      - 功能：获取ArcGIS版本
+      - 说明：执行"GetVersion"系统工具，解析返回的版本信息字符串，格式化为"主版本.次版本.补丁版本"格式返回。
+   
+   c) gp_cancel(): void
+      - 功能：取消GP工具执行
+      - 说明：调用Geoprocessor.Cancel()方法，终止正在执行的GP工具，释放相关资源。
+   
+   d) BuildParameters(args: List<ToolArgs>): IVariantArray
+      - 功能：构建GP工具参数数组
+      - 说明：创建IVariantArray对象，遍历args列表，根据direction筛选出输入参数（esriGPParameterDirectionInput），按顺序添加nowValue或replaceValue到数组，返回参数数组。
+   
+   e) GetToolMessages(result: IGeoProcessorResult): string
+      - 功能：获取GP工具执行信息
+      - 说明：遍历result.Messages，提取所有信息、警告、错误消息，拼接为多行字符串返回，用于日志记录和错误排查。
+
+6. DynamicTool（动态控件生成类）：
+   a) creatcontrol(form: ToolForm, args: List<ToolArgs>, menuBean: MenuBean): void
+      - 功能：动态创建工具参数控件
+      - 说明：遍历args列表，根据argType判断参数类型（字符串、数字、文件、文件夹、要素类等），调用CreateTextBox()、CreateComboBox()、CreateFileSelector()等方法创建对应的输入控件和标签，设置控件的Name、Location、Size、Text等属性，添加到form的SplitContainer.Panel1中，自动计算控件垂直位置(yOffset)。
+   
+   b) CreateTextBox(arg: ToolArgs): Control
+      - 功能：创建文本输入框
+      - 说明：创建UITextBox控件，设置Name为"txt_"+argName，Text为defalutValue或nowValue，Width为固定宽度，返回控件对象。
+   
+   c) CreateComboBox(arg: ToolArgs): Control
+      - 功能：创建下拉选择框
+      - 说明：创建UIComboBox控件，设置Name为"combox"+argName，如果defalutValue包含多个选项（用分号分隔），分割后添加到Items，设置SelectedIndex为第一个或匹配nowValue的选项，返回控件对象。
+   
+   d) CreateFileSelector(arg: ToolArgs): Control
+      - 功能：创建文件选择控件
+      - 说明：创建包含UITextBox和UIButton的组合控件，TextBox显示文件路径，Button点击时调用SelectFileFunc.sf_file()或sf_folder()选择文件或文件夹，将路径填入TextBox，返回组合控件对象。
+
+7. GetNowTime（时间工具类）：
+   a) nowtime(): string
+      - 功能：获取当前时间（格式1）
+      - 说明：返回"yyyy-MM-dd HH:mm:ss"格式的当前时间字符串，如"2024-01-15 14:30:25"。
+   
+   b) nowtime2(): string
+      - 功能：获取当前时间（格式2）
+      - 说明：返回"yyyyMMddHHmmss"格式的当前时间字符串（无分隔符），如"20240115143025"，用于文件名或数据库时间戳。
+   
+   c) GetFormattedTime(format: string): string
+      - 功能：获取自定义格式时间
+      - 说明：根据传入的format参数（DateTime格式字符串）返回格式化的当前时间，支持任意DateTime.ToString()支持的格式。
+
+================================================================================
+总结
+================================================================================
+
+以上为质检工具系统各模块类图的详细说明。每个类图文件对应一个功能模块，展示了类之间的关系、主要属性和方法。
+
+类图文件位置：
+- 01_用户管理模块.drawio
+- 02_主页展示模块.drawio
+- 03_质检工具模块.drawio
+- 04_质检任务模块.drawio
+- 05_参数配置模块.drawio
+- 06_其他工具模块.drawio
+
+所有类图文件均采用DrawIO XML格式，可使用DrawIO（draw.io或diagrams.net）软件打开编辑。
+
+文档编写日期：2024年
+版本：v1.0
