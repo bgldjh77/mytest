@@ -481,40 +481,7 @@
       - 功能：获取当前主题颜色数组
       - 说明：返回当前应用的4个主题颜色字符串数组，用于保存配置或恢复主题。
 
-4. SaveProject（工程保存与打开管理类）：
-   a) SaveProjectFile(path: string): bool
-      - 功能：保存工程文件
-      - 说明：创建INI格式的工程文件，保存任务列表路径、地图文档路径、工具资源路径、主题颜色等配置信息到指定path，调用SaveTaskList()保存任务列表，如果地图控件已加载则调用SaveMapDocument()保存地图文档，记录工程保存日志，成功返回true，失败返回false并记录错误日志。支持自动创建工程目录结构。
-   
-   b) OpenProjectFile(path: string): bool
-      - 功能：打开工程文件
-      - 说明：使用SelectFileFunc.sf_file()选择工程文件(.ini格式)，验证工程文件完整性，解析配置信息（任务列表路径、地图文档路径、工具资源路径、主题颜色等），调用LoadTaskList()加载任务列表到任务管理器，如果地图控件已初始化且工程包含地图数据则调用LoadMapDocument()自动恢复地图视图，调用ThemeColor.ApplyTheme()恢复主题颜色，更新工具资源路径配置，刷新主界面显示，成功返回true并提示"工程加载成功"，失败返回false并记录错误日志。
-   
-   c) SaveTaskList(): void
-      - 功能：保存任务列表
-      - 说明：调用GpTaskFunc.saveTask2csv()将当前任务列表保存到工程目录下的tasks.csv文件，包含所有任务的参数配置和状态信息。
-   
-   d) LoadTaskList(): void
-      - 功能：加载任务列表
-      - 说明：检查工程目录下的tasks.csv文件是否存在，存在则调用GpTaskFunc.addTaskByCache()加载任务到全局任务列表，清空现有任务后重新加载，刷新TaskListForm显示。
-   
-   e) SaveMapDocument(): void
-      - 功能：保存地图文档
-      - 说明：如果地图控件已初始化(globalpara.isArcGisInitialized为true)，获取axMapControl1.Map对象，创建IMapDocument实例，调用IMapDocument.Save()方法保存为.mxd文件到工程目录，保存地图视图范围、图层列表、符号化配置等信息。
-   
-   f) LoadMapDocument(): void
-      - 功能：加载地图文档
-      - 说明：检查工程目录下的.mxd文件是否存在，存在则创建IMapDocument对象，调用IMapDocument.Open()打开文档，将IMapDocument.Map赋值给axMapControl1.Map，刷新地图显示，恢复上次保存的视图范围和图层状态。
-   
-   g) GetProjectInfo(path: string): Dictionary<string, string>
-      - 功能：获取工程基本信息
-      - 说明：读取工程文件，提取工程名称、创建时间、最后修改时间、任务数量、地图文档路径等信息，返回包含这些信息的字典，用于工程列表显示或工程属性查看。
-   
-   h) ValidateProject(path: string): bool
-      - 功能：验证工程文件有效性
-      - 说明：检查工程文件是否存在、格式是否正确、必要的配置项是否完整、关联的文件路径是否有效，返回验证结果，防止加载损坏的工程文件导致系统异常。
-
-5. SelectFileFunc（文件选择类）：
+4. SelectFileFunc（文件选择类）：
    a) sf_folder(): string
       - 功能：选择文件夹
       - 说明：创建FolderBrowserDialog，显示文件夹选择对话框，用户选择后返回文件夹完整路径，取消则返回空字符串。
@@ -531,6 +498,103 @@
       - 功能：选择保存文件路径
       - 说明：创建SaveFileDialog，设置文件类型过滤器，显示保存对话框，用户选择后返回保存路径，取消则返回空字符串。
 
+5. globalpara（全局参数类）：
+   - 说明：静态类，存储全局配置参数和运行时状态：
+     - dbpath: SQLite数据库文件路径
+     - toolconfigpath: config.csv文件路径
+     - defaultGdbPath: 默认地理数据库路径
+     - isArcGisInitialized: ArcGIS控件是否已初始化
+     - GpBeanList: 全局任务列表
+
+================================================================================
+六、工程项目管理模块 (类图文件: 09_工程项目管理模块.drawio)
+================================================================================
+
+1. ProjectManager（工程项目管理类）：
+   a) SaveProjectFile(path: string): bool
+      - 功能：保存工程文件
+      - 说明：创建INI格式的工程文件，保存任务列表路径、地图文档路径、工具资源路径、主题颜色等配置信息到指定path。调用TaskListManager.SaveTaskList()保存任务列表，如果地图控件已加载则调用MapDocManager.SaveMapDocument()保存地图文档，调用ProjectConfigManager.SaveProjectConfig()保存工程配置。记录工程保存日志，成功返回true，失败返回false并记录错误日志。支持自动创建工程目录结构。
+   
+   b) OpenProjectFile(path: string): bool
+      - 功能：打开工程文件
+      - 说明：使用SelectFileFunc.sf_file()选择工程文件(.ini格式)，调用ValidateProject()验证工程文件完整性。解析配置信息（任务列表路径、地图文档路径、工具资源路径、主题颜色等），调用TaskListManager.LoadTaskList()加载任务列表到任务管理器，如果地图控件已初始化且工程包含地图数据则调用MapDocManager.LoadMapDocument()自动恢复地图视图，调用ProjectConfigManager.LoadProjectConfig()恢复工程配置（包括主题颜色和工具资源路径）。更新globalpara.toolconfigpath，刷新主界面显示，成功返回true并提示"工程加载成功"，失败返回false并记录错误日志。
+   
+   c) GetProjectInfo(path: string): Dictionary<string, string>
+      - 功能：获取工程基本信息
+      - 说明：读取工程文件，提取工程名称、创建时间、最后修改时间、任务数量、地图文档路径等信息，返回包含这些信息的字典，用于工程列表显示或工程属性查看。
+   
+   d) ValidateProject(path: string): bool
+      - 功能：验证工程文件有效性
+      - 说明：检查工程文件是否存在、格式是否正确、必要的配置项是否完整、关联的文件路径是否有效，返回验证结果，防止加载损坏的工程文件导致系统异常。
+   
+   e) CreateNewProject(name: string, path: string): bool
+      - 功能：创建新工程
+      - 说明：在指定路径创建新工程目录，初始化工程配置文件，设置工程名称和创建时间，创建空的任务列表文件，记录创建日志。成功返回true，失败返回false。
+   
+   f) CloseProject(): void
+      - 功能：关闭当前工程
+      - 说明：提示用户是否保存当前工程，清空任务列表和地图文档，重置工程配置为默认状态，释放相关资源。
+
+2. TaskListManager（任务列表管理类）：
+   a) SaveTaskList(csvPath: string): bool
+      - 功能：保存任务列表到CSV文件
+      - 说明：调用GpTaskFunc.saveTask2csv()将globalpara.GpBeanList中的所有任务保存到指定csvPath，包含所有任务的参数配置和状态信息。成功返回true，失败返回false并记录错误日志。
+   
+   b) LoadTaskList(csvPath: string): bool
+      - 功能：从CSV文件加载任务列表
+      - 说明：检查csvPath文件是否存在，存在则调用GpTaskFunc.addTaskByCache()加载任务到全局任务列表，清空现有任务后重新加载，刷新TaskListForm显示。成功返回true，失败返回false。
+   
+   c) ClearTaskList(): void
+      - 功能：清空任务列表
+      - 说明：清空globalpara.GpBeanList中的所有任务，刷新TaskListForm界面显示。
+
+3. MapDocManager（地图文档管理类）：
+   a) SaveMapDocument(mxdPath: string): bool
+      - 功能：保存地图文档
+      - 说明：检查ArcGIS控件是否已初始化(globalpara.isArcGisInitialized为true)，如果已初始化则获取axMapControl1.Map对象，创建IMapDocument实例，调用IMapDocument.Save()方法保存为.mxd文件到指定mxdPath，保存地图视图范围、图层列表、符号化配置等信息。成功返回true，失败返回false。
+   
+   b) LoadMapDocument(mxdPath: string): bool
+      - 功能：加载地图文档
+      - 说明：检查mxdPath文件是否存在，存在则创建IMapDocument对象，调用IMapDocument.Open()打开文档，将IMapDocument.Map赋值给axMapControl1.Map，刷新地图显示，恢复上次保存的视图范围和图层状态。成功返回true，失败返回false。
+   
+   c) IsMapDocumentAvailable(): bool
+      - 功能：检查地图文档是否可用
+      - 说明：检查ArcGIS控件是否已初始化，以及axMapControl1.Map是否包含有效的地图文档。返回true表示可以保存地图，false表示当前没有可保存的地图文档。
+
+4. ProjectConfigManager（工程配置管理类）：
+   a) SaveProjectConfig(projectPath: string): bool
+      - 功能：保存工程配置
+      - 说明：将当前系统配置（主题颜色、工具资源路径等）保存到工程配置文件中。调用ThemeColor.GetCurrentTheme()获取当前主题颜色，读取globalpara.toolconfigpath获取工具资源路径，写入工程目录下的配置文件。成功返回true，失败返回false。
+   
+   b) LoadProjectConfig(projectPath: string): bool
+      - 功能：加载工程配置
+      - 说明：从工程配置文件中读取保存的配置信息，调用UpdateThemeColors()恢复主题颜色，调用UpdateToolResourcePath()更新工具资源路径，刷新主界面显示。成功返回true，失败返回false。
+   
+   c) UpdateToolResourcePath(path: string): void
+      - 功能：更新工具资源路径
+      - 说明：验证path是否有效，更新globalpara.toolconfigpath，调用IniFunc.writeString()保存到系统配置文件，查找主窗体(Rib)并调用LoadTreeMenu()重新加载菜单。
+   
+   d) UpdateThemeColors(colors: string[]): void
+      - 功能：更新主题颜色
+      - 说明：接收颜色数组，调用ThemeColor.ApplyTheme()应用新的主题颜色，查找主窗体(Rib)调用UpdateRibbonIcons()更新图标颜色，刷新所有已打开窗体的颜色显示。
+
+5. SelectFileFunc（文件选择类）：
+   a) sf_folder(): string
+      - 功能：选择文件夹
+      - 说明：创建FolderBrowserDialog，显示文件夹选择对话框，用户选择后返回文件夹完整路径，取消则返回空字符串。
+   
+   b) sf_file(filter: string): string
+      - 功能：选择单个文件
+      - 说明：创建OpenFileDialog，设置文件类型过滤器（如"*.ini|*.ini"用于工程文件），显示文件选择对话框，用户选择后返回文件完整路径，取消则返回空字符串。
+   
+   c) sf_files(filter: string): string[]
+      - 功能：选择多个文件
+      - 说明：创建OpenFileDialog，设置Multiselect为true，显示文件选择对话框，用户选择后返回文件路径数组，取消则返回空数组。
+   
+   d) sf_saveFile(filter: string): string
+      - 功能：选择保存文件路径
+      - 说明：创建SaveFileDialog，设置文件类型过滤器，显示保存对话框，用户选择后返回保存路径，取消则返回空字符串。用于保存新工程时选择保存位置。
+
 6. globalpara（全局参数类）：
    - 说明：静态类，存储全局配置参数和运行时状态：
      - dbpath: SQLite数据库文件路径
@@ -540,7 +604,7 @@
      - GpBeanList: 全局任务列表
 
 ================================================================================
-六、其他工具模块 (类图文件: 06_其他工具模块.drawio)
+七、其他工具模块 (类图文件: 06_其他工具模块.drawio)
 ================================================================================
 
 1. UpdateInfoForm（软件信息窗体类）：
@@ -659,7 +723,7 @@
       - 说明：根据传入的format参数（DateTime格式字符串）返回格式化的当前时间，支持任意DateTime.ToString()支持的格式。
 
 ================================================================================
-七、规则配置模块 (类图文件: 07_规则配置模块.drawio)
+八、规则配置模块 (类图文件: 07_规则配置模块.drawio)
 ================================================================================
 
 1. DatabaseStructureForm（数据库结构配置窗体类）：
@@ -848,10 +912,10 @@
    - 说明：存储拓扑规则信息，包括规则类型(RuleType)、源要素类(OriginClass)、目标要素类(DestinationClass)、规则名称(RuleName)、是否启用(IsEnabled)等属性，用于拓扑规则配置和创建。
 
 10. TopologyValidationResult（拓扑验证结果实体类）：
-    - 说明：存储拓扑验证结果，包括错误总数(ErrorCount)、错误类型统计(ErrorTypeStats)、验证时间(ValidationTime)、是否通过验证(IsValid)等属性，用于验证结果展示和报告生成。
+     - 说明：存储拓扑验证结果，包括错误总数(ErrorCount)、错误类型统计(ErrorTypeStats)、验证时间(ValidationTime)、是否通过验证(IsValid)等属性，用于验证结果展示和报告生成。
 
 ================================================================================
-八、帮助模块 (类图文件: 08_帮助模块.drawio)
+九、帮助模块 (类图文件: 08_帮助模块.drawio)
 ================================================================================
 
 1. GuideForm（引导窗体类）：
@@ -981,10 +1045,16 @@
 - 04_质检任务模块.drawio
 - 05_参数配置模块.drawio
 - 06_其他工具模块.drawio
-- 07_规则配置模块.drawio (新增)
-- 08_帮助模块.drawio (新增)
+- 07_规则配置模块.drawio
+- 08_帮助模块.drawio
+- 09_工程项目管理模块.drawio (新增 - 从参数配置模块独立)
+
+说明：
+- 第九模块"工程项目管理模块"是从原"参数配置模块"中独立出来的新模块
+- 工程项目管理模块专注于工程文件的打开、保存、任务列表管理和地图文档管理
+- 参数配置模块现在专注于系统参数设置、主题颜色配置和工具资源路径配置
 
 所有类图文件均采用DrawIO XML格式，可使用DrawIO（draw.io或diagrams.net）软件打开编辑。
 
 文档编写日期：2024年
-版本：v2.0 (新增规则配置模块和帮助模块)
+版本：v3.0 (新增工程项目管理模块，从参数配置模块独立)
